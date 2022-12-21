@@ -7,6 +7,6 @@ markdown: kramdown
 kramdown:
   parse_block_html: true
 title: "DVWA Writeups"
-description: "This repository contains writeups for Damn Vulnerable Web Application (DVWA)."
+description: "This repository contains writeups different machines and CTFs."
 google_analytics: "G-XVWHEPX27F"
 
