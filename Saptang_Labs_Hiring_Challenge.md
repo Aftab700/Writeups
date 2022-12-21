@@ -196,4 +196,18 @@ so MIME type it is.
 
 We have to create polyglot PHP/JPG payload. how i do it is open jpg file and append php payload at last so let's create simple payload.
 
+**Record updated successfullyThe file has been uploaded** and file is uploaded successfully but where ?
+
+we have column name profile_picture in users table if you remember let's see that we still have SQLi.
+
+payload=`data=<@base64>621729581 UNION SELECT 1, gRoUp_cOncaT(0x7c,profile_picture,0x7c), 2, 3 fRoM users<@/base64>`
+
+result = `|../assets/uploads/simple.php|`
+
+so our file is at http://192.168.1.21:42710/assets/uploads/simple.php
+
+<img width="759" alt="image" src="https://user-images.githubusercontent.com/79740895/208973100-2b05bb94-de13-42f2-bd9d-e6c978989c45.png">
+
+It works just fine let's get reverse shell. for reference: https://www.revshells.com/
+
 
