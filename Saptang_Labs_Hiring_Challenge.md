@@ -198,7 +198,7 @@ We have to create polyglot PHP/JPG payload. how i do it is open jpg file and app
 
 **Record updated successfullyThe file has been uploaded** and file is uploaded successfully but where ?
 
-we have column name profile_picture in users table if you remember let's see that we still have SQLi.
+we have column name profile_picture in users table, if you remember that we still have SQLi.
 
 payload=`data=<@base64>621729581 UNION SELECT 1, gRoUp_cOncaT(0x7c,profile_picture,0x7c), 2, 3 fRoM users<@/base64>`
 
