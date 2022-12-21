@@ -46,4 +46,38 @@ Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
 ...
 ```
 
+First though was to look for `robots.txt` file but no luck so i did directory bruteforcing with gobuster.
+
+```Shell
+┌─[aftab@parrot]─[~/Downloads/practice/challenge]
+└──╼ $gobuster dir -u http://192.168.1.21:42710/ -w /usr/share/wordlists/dirb/common.txt 
+===============================================================
+Gobuster v3.1.0
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://192.168.1.21:42710/
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirb/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.1.0
+[+] Timeout:                 10s
+===============================================================
+2022/12/21 22:09:58 Starting gobuster in directory enumeration mode
+===============================================================
+/.hta                 (Status: 403) [Size: 280]
+/.htaccess            (Status: 403) [Size: 280]
+/.htpasswd            (Status: 403) [Size: 280]
+/Admin                (Status: 301) [Size: 321] [--> http://192.168.1.21:42710/Admin/]
+/assets               (Status: 301) [Size: 322] [--> http://192.168.1.21:42710/assets/]
+/includes             (Status: 301) [Size: 324] [--> http://192.168.1.21:42710/includes/]
+/index.php            (Status: 200) [Size: 349]                                          
+/search_result        (Status: 301) [Size: 329] [--> http://192.168.1.21:42710/search_result/]
+/server-status        (Status: 403) [Size: 280]                                               
+                                                                                              
+===============================================================
+2022/12/21 22:10:05 Finished
+===============================================================
+
+```
 
