@@ -279,4 +279,11 @@ flag{box_cracked_successfully_report_to_admin}challenge
 
 ---
 
-flag: ``` flag{box_cracked_successfully_report_to_admin}challenge ```
+flag: 
+```Shell
+flag{box_cracked_successfully_report_to_admin}challenge 
+```
+
+<br/>
+
+:octocat: Happy Hacking :octocat:
