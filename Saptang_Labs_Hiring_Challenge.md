@@ -168,5 +168,32 @@ response: `|zohl8meicohci9raw0|`
 
 password=zohl8meicohci9raw0
 
+We have username and password let's login as Admin.
+
+http://192.168.1.21:42710/Admin/dashboard.php
+
+<img width="929" alt="image" src="https://user-images.githubusercontent.com/79740895/208969394-1dd39a65-4610-4344-a776-bc499c46fd7a.png">
+
+looking at source code we have this comment:
+
+<img width="268" alt="image" src="https://user-images.githubusercontent.com/79740895/208969571-d42ef165-ef6c-4f45-b8b2-ff8a27d66335.png">
+
+visiting this page http://192.168.1.21:42710/Admin/edit_profile.php
+
+<img width="321" alt="image" src="https://user-images.githubusercontent.com/79740895/208969819-070314c6-98a8-473a-811f-faf3b991b983.png">
+
+We have functionality of file upload let's try uploading some php file.
+
+Oops error can't upload php, let's try simple jpg file.
+
+<img width="279" alt="image" src="https://user-images.githubusercontent.com/79740895/208970421-24489ab8-94a5-4370-9eab-c0e5c330c70f.png">
+
+so we can only upload jpg file but how it is checking for file type extension? let's do one experiment rename the jpg file to php if error it is looking for extension and if successful it is checking MIME type.
+
+Record updated successfullyThe file has been uploaded
+
+so MIME type it is.
+
+We have to create polyglot PHP/JPG payload. how i do it is open jpg file and append php payload at last so let's create simple payload.
 
 
