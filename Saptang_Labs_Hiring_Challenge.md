@@ -30,3 +30,10 @@ Currently scanning: Finished!   |   Screen View: Unique Hosts
  192.168.1.21    **:**:**:**:**:**      1      60  Intel Corporate             
 
 ```
+here `192.168.1.1` is ip of router.
+
+we scane the IP `192.168.1.5`,`192.168.1.21` and the IP `192.168.1.21` have web service running at port 42710.
+
+here i used rustscane for port scaning it is insanely fast.
+
+
