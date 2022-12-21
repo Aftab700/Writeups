@@ -45,6 +45,9 @@ Starting Script(s)
 Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
 ...
 ```
+opening this website we have nothing but this page:
+
+<img width="397" alt="image" src="https://user-images.githubusercontent.com/79740895/208959026-568a1c93-0751-4386-9bf7-79a56ddbbabc.png">
 
 First though was to look for `robots.txt` file but no luck so i did directory bruteforcing with gobuster.
 
@@ -80,4 +83,9 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
 ===============================================================
 
 ```
+
+now we have some interesting directories like Admin and search_result.
+
+Admin page requires authentication Username and Password.
+
 
