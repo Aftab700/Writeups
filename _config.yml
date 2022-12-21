@@ -7,6 +7,6 @@ markdown: kramdown
 kramdown:
   parse_block_html: true
 title: "CTF Writeups"
-description: "This repository contains writeups different machines and CTFs."
+description: "This repository contains writeups for different machines and CTFs."
 google_analytics: "G-XVWHEPX27F"
 
