@@ -106,6 +106,15 @@ on submitting the form we have this response:
 
 `ID,	Name,	Roll,	Marks` it looks like it is fetching this data from sql database so lets try SQL injection.
 
+this POST request have `data=NjIxNzI5NTgx` it base64 encoded value of `621729581`.
+
+lets try with simple payload `' OR 1=1 #` but it not working after few tries i tried `621729581 OR 1=1` base64 encode and it gives us all the entries hooray,
+and that is successful SQL injection.
+
+payload= `data=<@base64>621729581 OR 1=1<@/base64>`  <-- I'm using Hackvertor burp extension.
+
+<img width="918" alt="image" src="https://user-images.githubusercontent.com/79740895/208964245-b65f25db-f151-4791-8cf1-c43d3a977d9d.png">
+
 
 
 
