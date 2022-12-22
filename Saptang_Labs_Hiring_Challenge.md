@@ -287,18 +287,19 @@ www-data@heathrow-VirtualBox:/$
 
 ```
 
-We have shell but we cat access /home/heathrow we need to escalate our privilege first thing that comes in mind is linpeas.sh 
-let's move that to victim machine i create local server with python `python -m http.server 80`, to transfer file because we normally don't have internet access in victim machine.
+We have shell but we can't access /home/heathrow we need to escalate our privilege. first thing that comes in mind is linpeas.sh 
+let's move that to victim machine i create local server with python `python -m http.server 80`, 
+to transfer file because we normally don't have internet access in victim machine.
 
 change permissions to +x : ```chmod +x linpeas.sh```
 
 Now run the file: ```./linpeas.sh```
 
-Analyzing the output we have first suggestion for [CVE-2022-0847] DirtyPipe:
+Analyzing the output we have first suggestion for **[CVE-2022-0847] DirtyPipe**:
 
 <img width="310" alt="image" src="https://user-images.githubusercontent.com/79740895/208977841-a68b2f57-224e-44ae-b548-103ce9b3b21c.png">
 
-reference: https://github.com/AlexisAhmed/CVE-2022-0847-DirtyPipe-Exploits
+reference: [https://github.com/AlexisAhmed/CVE-2022-0847-DirtyPipe-Exploits](https://github.com/AlexisAhmed/CVE-2022-0847-DirtyPipe-Exploits)
 
 we follow the steps in GitHub repo and we have `exploit-1`, `exploit-2`. transfer this to victim machine and run.
 
