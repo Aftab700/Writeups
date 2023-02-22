@@ -4,7 +4,7 @@ _Please follow the rules for this CTF!_
 
 ------
 
-Connect here: Read The Rules
+Connect here: [Read The Rules](https://ctf.nahamcon.com/rules)
 
 flag is in source code
 
