@@ -1,20 +1,18 @@
 ## xorxorxor
 
-EASY
-CATEGORY: Crypto
--------
+`EASY`, `Crypto`
 
-DESCRIPTION:
+DESCRIPTION: _Who needs AES when you have XOR?_
 
-Who needs AES when you have XOR?
-
+-----
+ 
 By looking at python code for encryption we know that length of key is 4 and 
 
-flag xor key = encrypted text that we have so, if we do xor of cipher text and first 4 character of flag that we know is "HTB{" we get the key.
+flag xor key = encrypted text so, if we do xor of cipher text and first 4 character of flag that we know is "HTB{" we get the key.
 
 (encrypted text) xor 'HTB{' = key
 
-know we have the key to decrypt the flag:
+now we have the key to decrypt the flag:
 
 cipher xor key = flag
 
