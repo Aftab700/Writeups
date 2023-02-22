@@ -6,7 +6,7 @@ plugins:
 markdown: kramdown
 kramdown:
   parse_block_html: true
-title: "CTF Writeups"
+title: "Writeups"
 description: "This repository contains writeups for different machines and CTFs."
 google_analytics: "G-XVWHEPX27F"
 

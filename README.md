@@ -1,6 +1,8 @@
 ## Writeups
 
 
-- [Saptang Labs Hiring Challenge ](Saptang_Labs_Hiring_Challenge.md)
+- [HTB](HTB)
+- [CTF](CTF)
+- [Others](Others)
 
 
