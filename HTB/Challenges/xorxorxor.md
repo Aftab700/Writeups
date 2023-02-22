@@ -1,10 +1,10 @@
 ## xorxorxor
 
-`EASY`, `Crypto`
+`EASY` , `Crypto`
 
 DESCRIPTION: _Who needs AES when you have XOR?_
 
------
+--------
  
 By looking at python code for encryption we know that length of key is 4 and 
 
