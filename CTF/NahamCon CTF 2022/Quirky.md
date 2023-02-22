@@ -6,7 +6,7 @@ _Attachment: [Quirky](files/quirky)_
 
 -----
 
-given file is hex of image raw data we can use CyberChef to get the image
+given file is hex of image raw data we can use [CyberChef](https://gchq.github.io/CyberChef/) to get the image
 it will give us QR code after parsing the QRcode it gives the flag
 
 filters to use in CyberChef:
