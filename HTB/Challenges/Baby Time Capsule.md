@@ -208,6 +208,4 @@ Process finished with exit code 0
   
 </details>
   
-```
-HTB{t3h_FuTUr3_15_bR1ghT_1_H0p3_y0uR3_W34r1nG_5h4d35!}
-```
+flag= HTB{t3h_FuTUr3_15_bR1ghT_1_H0p3_y0uR3_W34r1nG_5h4d35!}
