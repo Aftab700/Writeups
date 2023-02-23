@@ -102,3 +102,24 @@ if __name__ == '__main__':
 
 To solve this we need knowledge of the Chinese remainder theorem.
 
+m=message, e=5, n=public key, c=cipher text
+
+m<sup>e</sup> mod n = c
+
+let's take x = m<sup>e</sup>
+
+x mod n = c
+
+here x module n is remainder c, so we can say that x anc c are congruent modulo.
+
+x ≡ c (mod n)
+
+Here server encrypt same message with different public keys.
+
+x ≡ c1 (mod n1)
+
+x ≡ c2 (mod n2)
+
+x ≡ c3 (mod n3)
+
+
