@@ -122,4 +122,7 @@ x ≡ c2 (mod n2)
 
 x ≡ c3 (mod n3)
 
+The Chinese Remainder Theorem (CRT) is used to solve a set of different 
+congruent equations with one variable but different moduli which are relatively
+prime.
 
