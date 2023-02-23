@@ -1,3 +1,8 @@
+---
+layout: page
+title: Baby Time Capsule
+---
+
 ## Baby Time Capsule
 
 `EASY` , `Crypto`
