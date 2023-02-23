@@ -126,6 +126,30 @@ The Chinese Remainder Theorem (CRT) is used to solve a set of different
 congruent equations with one variable but different moduli which are relatively
 prime.
 
+To find x:
+
+x = (c1 <span>&#215;</span> N1 <span>&#215;</span> N1<sup>-1</sup> + c2 <span>&#215;</span> N2 <span>&#215;</span> N2<sup>-1</sup> + 
+c3 <span>&#215;</span> N3 <span>&#215;</span> N3<sup>-1</sup>) mod N
+
+here, N = n1 <span>&#215;</span> n2 <span>&#215;</span> n3
+
+N1 = N / n1
+
+N2 = N / n2
+
+N3 = N / n3
+
+N1 <span>&#215;</span> N1<sup>-1</sup> = 1 mod n1
+
+N2 <span>&#215;</span> N2<sup>-1</sup> = 1 mod n2
+
+N3 <span>&#215;</span> N3<sup>-1</sup> = 1 mod n3
+
+we can use extended euclidean algorithm to find N1<sup>-1</sup>.
+
+
+I used python library to perform CRT.
+
 
 Python code:
 
@@ -184,3 +208,6 @@ Process finished with exit code 0
   
 </details>
   
+```
+HTB{t3h_FuTUr3_15_bR1ghT_1_H0p3_y0uR3_W34r1nG_5h4d35!}
+```
