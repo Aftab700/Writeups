@@ -126,3 +126,61 @@ The Chinese Remainder Theorem (CRT) is used to solve a set of different
 congruent equations with one variable but different moduli which are relatively
 prime.
 
+
+Python code:
+
+<details><summary markdown="span">Click to see python code :diamond_shape_with_a_dot_inside: </summary>
+  
+
+```python
+import json
+from Crypto.Util.number import long_to_bytes
+from pwn import *
+from sympy.ntheory.modular import crt
+from sympy.simplify.simplify import nthroot
+
+conn = remote('209.97.185.157', 32141)
+rem = list()
+num = list()
+for i in range(3):
+    conn.sendline(b'Y')
+    a = conn.recvline()
+    r = json.loads(a[74:-1].decode())
+    m = r['time_capsule']
+    n = r['pubkey'][0]
+    e = 5
+    m = int(m, 16)
+    n = int(n, 16)
+    rem.append(m)
+    num.append(n)
+
+x = crt(num, rem, check=True)
+# print(f'x = {x[0]}')
+flag = nthroot(x[0], 5)
+print(flag)
+print(long_to_bytes(flag))
+
+conn.sendline(b'N')
+conn.recvline()
+conn.close()
+```
+  
+</details>
+  
+<details><summary markdown="span">Click to see output :diamond_shape_with_a_dot_inside: </summary>
+  
+
+```shell
+[x] Opening connection to 209.97.185.157 on port 32141
+[x] Opening connection to 209.97.185.157 on port 32141: Trying 209.97.185.157
+[+] Opening connection to 209.97.185.157 on port 32141: Done
+3133512701921564926666059129802238375015291423590355094862405004229914481893581069974415008616334994674940586670768933862016098685
+b'HTB{t3h_FuTUr3_15_bR1ghT_1_H0p3_y0uR3_W34r1nG_5h4d35!}'
+[*] Closed connection to 209.97.185.157 port 32141
+
+Process finished with exit code 0
+
+```
+  
+</details>
+  
