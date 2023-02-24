@@ -8,3 +8,7 @@ $section-headings-color: #920be0 !default;
 details { cursor: text; }
 summary { cursor: pointer; }
 
+.navbar {
+    position: sticky;
+}
+
