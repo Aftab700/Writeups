@@ -1,4 +1,5 @@
 theme: jekyll-theme-cayman
+layout: /_layouts/custom.html
 plugins:
   - jemoji
   - jekyll-feed
