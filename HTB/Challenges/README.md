@@ -1,7 +1,7 @@
 ## Crypto:
 
 - [xorxorxor](xorxorxor.md)
-- [Baby Time Capsule](Baby%20Time%20Capsule.md)
+- [Baby Time Capsule](Baby_Time_Capsule.md)
 
 
 
