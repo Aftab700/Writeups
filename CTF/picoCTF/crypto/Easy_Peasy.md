@@ -93,6 +93,7 @@ and `flag = (encrypted flag) xor key`
 here is python script to find flag:
 
 <details><summary markdown="span">Click to see code :diamond_shape_with_a_dot_inside: </summary>
+<!-- {::options parse_block_html="false" /}  -->
 
 ```python
 from Crypto.Util.number import long_to_bytes
@@ -113,6 +114,7 @@ print("Flag: picoCTF{%s}" % flag)
 conn.close()
 
 ```
+<!-- {::options parse_block_html="true" /}  -->
 </details>
 
 ```
