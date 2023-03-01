@@ -110,7 +110,7 @@ conn.recvuntil("Here ya go!\n".encode())
 encrypted_message = str(conn.recvline(), "ascii").strip()
 key = xor(long_to_bytes(int("0x" + encrypted_message, 16)), message.encode())
 flag = xor(long_to_bytes(int("0x" + encrypted_flag, 16)), key).decode()
-print("Flag: picoCTF{%s}" % flag)
+print(f"Flag: picoCTF{{{flag}}}")
 conn.close()
 
 ```
