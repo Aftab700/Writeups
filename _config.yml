@@ -1,0 +1,12 @@
+theme: jekyll-theme-cayman
+plugins:
+  - jemoji
+  - jekyll-feed
+  - jekyll-seo-tag
+markdown: kramdown
+kramdown:
+  parse_block_html: true
+title: "Writeups"
+description: "This repository contains writeups for HTB , different CTFs and other challenges."
+google_analytics: G-VSNWH55C79
+
