@@ -1,5 +1,5 @@
 
-## CTF
+# CTF Writeups
 
 
 - [picoCTF 2023](picoCTF_2023)
