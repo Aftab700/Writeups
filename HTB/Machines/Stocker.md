@@ -131,14 +131,13 @@ Payload:
 
 Reference: https://www.revshells.com/
 
+save this as js file and run using sudo and path traversal.
+
 <img width="343" alt="image" src="https://user-images.githubusercontent.com/79740895/228799823-4734593e-c124-4224-ba63-a028a4618805.png">
 
 <img width="200" alt="image" src="https://user-images.githubusercontent.com/79740895/228798809-70c77d3a-894a-4cb9-80fc-49fb48994544.png">
 
 Now we are root.
-
-
-
 
 
 :octocat: Happy Hacking :octocat:
