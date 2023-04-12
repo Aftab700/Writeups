@@ -1,4 +1,0 @@
-# Lame  |  Beginner Track
-
-
-
