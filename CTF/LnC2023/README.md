@@ -13,6 +13,8 @@ https://ctf.lagncra.sh/challenges
 ### Forensics
 - [Base Madness](#base-madness)
 
+### Reverse
+- [First Program](#first-program)
 
 
 -------
@@ -96,6 +98,32 @@ flag:  LNC2023{ayaka_is_key}
 
 
 
+
+
+
+
+
+-------
+
+## Reverse
+
+### First Program
+
+Description: _This is the first program that was created in the Dystopian times can you help find the flag inside it?_
+
+one file is given: simplere
+
+simplere: ELF 64-bit LSB pie executable
+
+open this in Ghidra
+
+we can see flag in side main()
+
+<img width="268" alt="image" src="https://user-images.githubusercontent.com/79740895/232018262-723d7321-8bc6-47dd-b149-d2645c67e656.png">
+
+```
+flag: LNC2023{s1mpl3_4m_1_r1ghT?}
+```
 
 
 
