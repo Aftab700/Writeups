@@ -7,6 +7,9 @@ https://ctf.lagncra.sh/challenges
 ### Web
 - [DotDashDot](#dotdashdot)
 
+### Crypto
+- [You Don't Know About Us](#you-dont-know-about-us)
+
 
 
 
@@ -47,6 +50,19 @@ flag: LNC2023{T3mpl4t35_4r3_c00L_bUt_d4nG3r0u5_776843}
 
 
 
+## Crypto
+
+### You Don't Know About Us
+
+Description: _You ain’t gonna understand our language!
+
+JZUWGZJAORZHSIDIOVWWC3RBEBKGQ2LTEBUXGIDUNBSSAYLDOR2WC3BAMVXGG33EMVSCA3LFONZWC43HMU5AUQSEKMZDAMRTPN2GWY3SORVWG4T5_
+
+It is Base32 > Rot 10(Rot13 with n=10)
+
+```
+flag:  LNC2023{dumbdumb}
+```
 
 
 
