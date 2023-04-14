@@ -10,10 +10,12 @@ https://ctf.lagncra.sh/challenges
 ### Crypto
 - [You Don't Know About Us](#you-dont-know-about-us)
 
+### Forensics
+- [Base Madness](#base-madness)
 
 
 
-
+-------
 
 ## Web
 
@@ -50,6 +52,8 @@ flag: LNC2023{T3mpl4t35_4r3_c00L_bUt_d4nG3r0u5_776843}
 
 
 
+----------
+
 ## Crypto
 
 ### You Don't Know About Us
@@ -63,6 +67,35 @@ It is Base32 > Rot 10(Rot13 with n=10)
 ```
 flag:  LNC2023{dumbdumb}
 ```
+
+
+
+
+
+
+---------
+## Forensics
+
+### Base Madness
+
+Description: _Zip files and encryptions were used often in the modern times. You came across this 2 files. One containing a text one is a zip file. Are you able to decipher it?_
+
+two files are given: base_madness.txt, base_madness.zip
+
+base_madness.txt is base64 encoded: `thisisthepasswordtounlockthefile`
+
+unzip the file with this file. There is one image ayaka.jpg 
+
+open this image with notepad there is flag.
+
+<img width="361" alt="image" src="https://user-images.githubusercontent.com/79740895/231988288-e124c423-d078-4d08-ae81-70ea09e39c77.png">
+
+```
+flag:  LNC2023{ayaka_is_key}
+```
+
+
+
 
 
 
