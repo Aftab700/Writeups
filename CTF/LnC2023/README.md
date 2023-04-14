@@ -19,6 +19,10 @@ https://ctf.lagncra.sh/challenges
 ### Misc
 - [Hidden in Plain Sight](#hidden-in-plain-sight)
 
+### Boot to root
+- [Pickle Rick](#pickle-rick)
+
+
 -------
 
 ## Web
@@ -167,6 +171,59 @@ flag: LNC2023{ans1_c0ntr0l_s3qu3nc3s_damn_c00l}
 
 
 
+
+
+
+
+
+----------
+
+## Boot to root
+
+### Pickle Rick
+
+Description: _Rick has turned himself into a pickle, can you find him before its too late..._
+
+Download: https://drive.google.com/file/d/1ZULGK4p7cJQHNabmDHdtki-g1xNfHu0f/view?usp=share_link
+
+_7z Password: &y9PBYf8gZ^996s9_
+
+After unzip we have pickle-shop.ova file we can use VMWare to run this machine but if we only want to see the file system we can do
+ that with tools like 7z.
+ 
+ right click on pickle-shop.ova and open with 7z as archive 
+ 
+ <img width="471" alt="image" src="https://user-images.githubusercontent.com/79740895/232049128-950a28f4-2c9c-48e3-8d92-8d3a8a69931c.png">
+ 
+ after looking many files we found aws credentials ` pickle-shop.ova\pickle-shop-disk1.vmdk\2.img\root\.aws\credentials `
+ 
+ <img width="443" alt="image" src="https://user-images.githubusercontent.com/79740895/232049998-89d097e0-c768-4f8d-b709-dddcfb4dc9cb.png">
+
+we found following credentials:
+```
+aws_access_key_id = AKIAZNKM5ODGICECDW5U
+aws_secret_access_key = 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
+```
+
+configure awscli with these credentials: ` aws configure `
+
+<img width="413" alt="image" src="https://user-images.githubusercontent.com/79740895/232050623-7a6151b3-7a61-47c3-9c26-6e1317c03c37.png">
+
+Let's check for s3 buckets: ` aws s3 ls `
+
+<img width="229" alt="image" src="https://user-images.githubusercontent.com/79740895/232050882-fdb89b1a-1887-4fab-b3c7-9863cbfa81a9.png">
+
+download the s3 bucket: ` aws s3 sync s3://lnc-pickle-shop . `
+
+<img width="282" alt="image" src="https://user-images.githubusercontent.com/79740895/232051377-7a2e3e49-2503-4429-a2f7-04f4cc457ecc.png">
+
+flag is in this bucket
+
+<img width="158" alt="image" src="https://user-images.githubusercontent.com/79740895/232051469-3bae4a11-bf47-4060-bce1-b98c8f0d1186.png">
+
+```
+flag: LNC2023{1m_p1ckl3_r1111ck}
+```
 
 
 
