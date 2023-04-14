@@ -11,6 +11,7 @@ https://ctf.lagncra.sh/challenges
 ### Crypto
 - [You Don't Know About Us](#you-dont-know-about-us)
 - [Zig Zag](#zig-zag)
+- [Hope](#hope)
 
 ### Forensics
 - [Base Madness](#base-madness)
@@ -115,6 +116,32 @@ Decoder for reference: https://www.dcode.fr/rail-fence-cipher
 
 ```
 flag: LNC2023{THISWASQUITEOBVIOUS}
+```
+
+<br>
+
+### Hope
+
+Description: _Can you find the reason why the survivals are still surviving? The reason for their strong suvival skills can be found after decrypting their message. Flag format is LNC2023{flag}_
+
+attached file: message.txt
+
+it contains following:
+
+Encoded Key: 36f9a5900a637b0248cf7c8fe3af44ca
+
+Encoded Message: ...- -.-- .. .. .. .-- -- .-.. .-- -..-
+
+Encoded Key is md5 hash of `SUPERKEY`. https://crackstation.net/
+
+Encoded Message is Morse code which decode to `VYIIIWMLWX`
+
+It is [Vigenere Cipher](https://www.dcode.fr/vigenere-cipher) and key to decrypt is `SUPERKEY`
+
+decoded text is `DETERMINED`
+
+```
+flag: LNC2023{DETERMINED}
 ```
 
 
