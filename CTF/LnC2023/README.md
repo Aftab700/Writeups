@@ -9,6 +9,7 @@ https://ctf.lagncra.sh/challenges
 
 ### Crypto
 - [You Don't Know About Us](#you-dont-know-about-us)
+- [Zig Zag](#zig-zag)
 
 ### Forensics
 - [Base Madness](#base-madness)
@@ -22,8 +23,11 @@ https://ctf.lagncra.sh/challenges
 ### Boot to root
 - [Pickle Rick](#pickle-rick)
 
+<br>
 
 -------
+
+<br>
 
 ## Web
 
@@ -59,8 +63,11 @@ flag: LNC2023{T3mpl4t35_4r3_c00L_bUt_d4nG3r0u5_776843}
 
 
 
+<br>
 
 ----------
+
+<br>
 
 ## Crypto
 
@@ -76,12 +83,30 @@ It is Base32 > Rot 10(Rot13 with n=10)
 flag:  LNC2023{dumbdumb}
 ```
 
+<br>
+
+### Zig Zag
+
+Description: _Oh shoot, I should build some RAIL with FENCE._
+
+_N2ISTVSLC03HSAQIEBIU2TWUOO_
+
+It is Rail Fence (Zig-Zag) Cipher
+
+Decoder for reference: https://www.dcode.fr/rail-fence-cipher
+
+```
+flag: LNC2023{THISWASQUITEOBVIOUS}
+```
 
 
 
-
+<br>
 
 ---------
+
+<br>
+
 ## Forensics
 
 ### Base Madness
@@ -108,8 +133,11 @@ flag:  LNC2023{ayaka_is_key}
 
 
 
+<br>
 
 -------
+
+<br>
 
 ## Reverse
 
@@ -142,8 +170,11 @@ flag: LNC2023{s1mpl3_4m_1_r1ghT?}
 
 
 
+<br>
 
 --------
+
+<br>
 
 ## Misc
 
@@ -175,8 +206,11 @@ flag: LNC2023{ans1_c0ntr0l_s3qu3nc3s_damn_c00l}
 
 
 
+<br>
 
 ----------
+
+<br>
 
 ## Boot to root
 
