@@ -14,6 +14,7 @@ https://ctf.lagncra.sh/challenges
 
 ### Forensics
 - [Base Madness](#base-madness)
+- [Wave](#wave)
 
 ### Reverse
 - [First Program](#first-program)
@@ -143,7 +144,23 @@ open this image with notepad there is flag.
 flag:  LNC2023{ayaka_is_key}
 ```
 
+<br>
 
+### Wave
+
+Description: _I love this spectrum. My kind of vibe._
+
+Attached file: wave.wav
+
+As the description suggests flag is in Spectrogram of audio file.
+
+<img width="644" alt="image" src="https://user-images.githubusercontent.com/79740895/232098960-27cf44d3-794c-4bd8-ae6b-45e746c6e211.png">
+
+Tool used: Sonic Visualizer
+
+```
+flag: LNC2023{annoyingwave}
+```
 
 
 
