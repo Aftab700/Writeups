@@ -16,6 +16,8 @@ https://ctf.lagncra.sh/challenges
 ### Reverse
 - [First Program](#first-program)
 
+### Misc
+- [Hidden in Plain Sight](#hidden-in-plain-sight)
 
 -------
 
@@ -124,6 +126,52 @@ we can see flag in side main()
 ```
 flag: LNC2023{s1mpl3_4m_1_r1ghT?}
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------
+
+## Misc
+
+### Hidden in Plain Sight
+
+Description: _UGH Ansi screwed up again! I wonder what sequence of events lead to this._
+
+nc nc.lagncra.sh 8004
+
+connecting to this is not showing anythig so let's try to save this in file.
+
+<img width="247" alt="image" src="https://user-images.githubusercontent.com/79740895/232020790-da910eb6-16cf-4283-9c65-8220a2c03f61.png">
+
+open this file with editor
+
+<img width="242" alt="image" src="https://user-images.githubusercontent.com/79740895/232021141-395e8cbb-aa7b-4f72-8ba6-df3eb2c2348a.png">
+
+There is flag. 
+
+less command also works. ` cat 1.txt |less `
+
+```
+flag: LNC2023{ans1_c0ntr0l_s3qu3nc3s_damn_c00l}
+```
+
+
+
+
+
+
+
+
 
 
 
