@@ -2,6 +2,7 @@
 # CTF Writeups
 
 
+- [Lag and Crash 3.0](LnC2023)
 - [picoCTF 2023](picoCTF_2023)
 - [picoCTF](picoCTF)
 - [FooBar CTF 2023](FooBar_CTF_2023)
