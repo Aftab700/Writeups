@@ -15,6 +15,7 @@ https://ctf.lagncra.sh/challenges
 ### Forensics
 - [Base Madness](#base-madness)
 - [Wave](#wave)
+- [Incompetent](#incompetent)
 
 ### Reverse
 - [First Program](#first-program)
@@ -162,6 +163,31 @@ Tool used: Sonic Visualizer
 flag: LNC2023{annoyingwave}
 ```
 
+<br>
+
+### Incompetent
+
+Description: _This is a sample description for my awesome challenge_
+
+Attached file: secret.zip
+
+unzip the file and there are two more file: Homework.zip, password.docx (inside folder name Important)
+
+Homework.zip have flag.docx inside but it is password protected. Password is in password.docx but not visible to us because it is in strings.
+
+<img width="167" alt="image" src="https://user-images.githubusercontent.com/79740895/232106248-e53a58da-7da7-47bd-97cc-154b9cf750d2.png">
+
+Reference: https://gchq.github.io/CyberChef/
+
+password: ` kimiwadekinaiko `
+
+Now we can open flag.docx but flag is not visible because again it is in strings.
+
+<img width="196" alt="image" src="https://user-images.githubusercontent.com/79740895/232106899-797dd885-701a-457a-bc9a-feed22f19014.png">
+
+```
+flag: LNC2023{konoyodeichibandekinaiko}
+```
 
 
 
