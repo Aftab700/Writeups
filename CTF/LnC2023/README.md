@@ -17,6 +17,7 @@ https://ctf.lagncra.sh/challenges
 - [Base Madness](#base-madness)
 - [Wave](#wave)
 - [Incompetent](#incompetent)
+- [Embedment](#embedment)
 
 ### Reverse
 - [First Program](#first-program)
@@ -216,6 +217,29 @@ Now we can open flag.docx but flag is not visible because again it is in strings
 ```
 flag: LNC2023{konoyodeichibandekinaiko}
 ```
+
+### Embedment
+
+Description: _It looks like there is a secret message that is embeded into the picture. Find a way to retrieve the embeded materials from the image to obtain the flag._
+
+attached file: [Flag.jpg](https://user-images.githubusercontent.com/79740895/232201150-433884d6-e09f-4c73-ada8-9ddc9e2b9f3f.jpg)
+
+word document file is embedded in this image.
+
+to extract right click on image open with 7z as archive and save extracted files.
+
+<img width="214" alt="image" src="https://user-images.githubusercontent.com/79740895/232201217-31618063-c885-4878-a448-6fe4b5581c6d.png">
+
+compress this extracted file to zip and rename to `flag.docx` now it will open as word document.
+
+<img width="324" alt="image" src="https://user-images.githubusercontent.com/79740895/232201487-92cf08ea-1f0c-4efc-b246-325ee348fb2e.png">
+
+```
+flag: LNC2023{S3cr3tF1aG}
+```
+
+
+
 
 
 
