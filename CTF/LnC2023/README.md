@@ -23,6 +23,7 @@ https://ctf.lagncra.sh/challenges
 
 ### Misc
 - [Hidden in Plain Sight](#hidden-in-plain-sight)
+- [Swiftly](#swiftly)
 
 ### Boot to root
 - [Pickle Rick](#pickle-rick)
@@ -284,6 +285,24 @@ less command also works. ` cat 1.txt |less `
 
 ```
 flag: LNC2023{ans1_c0ntr0l_s3qu3nc3s_damn_c00l}
+```
+
+<br>
+
+### Swiftly
+
+Description: _Looks like the message from the military to all remaining survivals have been damaged, find a way to read all the qr code to obtain the flag._
+
+attached file: [Flag.gif](https://user-images.githubusercontent.com/79740895/232199504-0b1add77-b1c7-44e6-8cf5-b430c433b3d3.gif)
+
+to get the flag we have to extract the frames from gif: ` ffmpeg -i Flag.gif -vsync 0 out%d.png `
+
+and read the qr from extracted frames: ` zbarimg out* -q | sed 's/QR-Code://g' | tr '\n' '\0' `
+
+<img width="260" alt="image" src="https://user-images.githubusercontent.com/79740895/232200271-397f1cea-8a5d-424b-9138-102a5ac0ebe9.png">
+
+```
+flag: LNC2023{Are_y0u_FaSt_En0ugh_4_th1s}
 ```
 
 
