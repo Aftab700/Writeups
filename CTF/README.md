@@ -2,7 +2,10 @@
 # CTF Writeups
 
 
+<<<<<<< HEAD
 - [Lag and Crash 3.0](LnC2023)
+=======
+>>>>>>> public_repo/main
 - [picoCTF 2023](picoCTF_2023)
 - [picoCTF](picoCTF)
 - [FooBar CTF 2023](FooBar_CTF_2023)
