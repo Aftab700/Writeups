@@ -12,6 +12,7 @@ FLAG FORMAT: `CHCTF{}`
 
 ### Crypto
 - [The Beginning Of All](#The-Beginning-Of-All)
+- [Leaked Convo](#Leaked-Convo)
 
 
 
@@ -90,6 +91,23 @@ After decoding we get this: `CHCTF5URR3ND3R 0R 5UFF3R`
 flag: CHCTF{5URR3ND3R_0R_5UFF3R}
 ```
 
+<br>
 
+### Leaked Convo
+
+given text:
+```
+duv#r!|"rG Xrr} (|$! %|vpr y|&; Znxr "$!r {| |{r urn!" $";
+a(!ryyG N!r (|$ q|{r &v#u (|$! "r#$}L
+Yr|{G R%r!(#uv{t v" "r#; aur }n(y|nq" n!r "r#; aur #n!tr#" n!r sv'rq; V#â" w$"# n zn##r! |s #vzr {|&.
+duv#r!|"rG aur p|{pr}# |s &nv#v{t or&vyqr!" zr; ]b]T`*>DBlD>g@lD=lBDArDlDb@lWAr,; dr {rrq #| xrr} !|#n#v{t |$! p|{%r!"n#v|{ "| #un# {|#uv{t tr#" yrnxrq;
+a(!ryyG [|#rq.
+```
+
+It is rot 47 with n=81. and flag is in rot13.
+
+```
+flag: CHCTF{175_71M3_70_574r7_7H3_W4r}
+```
 
 
