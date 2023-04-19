@@ -13,6 +13,7 @@ FLAG FORMAT: `CHCTF{}`
 ### Crypto
 - [The Beginning Of All](#The-Beginning-Of-All)
 - [Leaked Convo](#Leaked-Convo)
+- [Top Password](#Top-Password)
 
 ### Digital Forensics
 - [The Cryptic Sound](#The-Cryptic-Sound)
@@ -116,7 +117,26 @@ It is rot 47 with n=81. and flag is in rot13.
 flag: CHCTF{175_71M3_70_574r7_7H3_W4r}
 ```
 
+<br>
 
+### Top Password
+
+DESCRIPTION:
+_Out of nowhere, Leon signaled something to Cisco. Kind of some secret language. Since Leon is out of his place, why not a peek-a-boo into his room? I climbed to the 2nd floor to his room where I found his Tablet charging and a note pinned on the board. Maybe that's the password for the tablet. I NEED THAT!_
+
+file: [image.png](https://github.com/Manoj-Mukund/files/blob/main/CyberHavoc/image.png)
+
+cipher text: `WXERGT_CSZWQWREGIYQZ`
+
+given image is French Sign Language which decode to : `JUMPINGEVENSTEPSONLY`
+
+It is [hill cipher](https://www.dcode.fr/hill-cipher). the matrix number values are (2, 4, 6, 8) from the `JUMPINGEVENSTEPSONLY` and alphabet 27 character.
+
+decoded text: `DESTRUCTION_AT_PEAK_`
+
+```
+flag: CHCTF{DESTRUCTION_AT_PEAK}
+```
 
 
 
