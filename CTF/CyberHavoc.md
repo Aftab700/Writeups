@@ -17,6 +17,7 @@ FLAG FORMAT: `CHCTF{}`
 
 ### Digital Forensics
 - [The Cryptic Sound](#The-Cryptic-Sound)
+- [Dump Digging](#Dump-Digging)
 
 ### Web
 - [Tyrell's Password Maze](#Tyrells-Password-Maze)
@@ -157,6 +158,26 @@ tool used: https://morsecode.world/international/decoder/audio-decoder-adaptive.
 
 ```
 flag: CHCTF{BONSOIRELLIOT}
+```
+
+<br>
+
+### Dump Digging
+
+file: [Is it True.pcapng]()
+
+there is one png file `zero or one.jpg` to extract it open Wireshark 
+
+`File > Export Objects > HTTP` and select file and save.
+
+inside this jpg image there is hexdump data 
+
+<img width="480" alt="image" src="https://user-images.githubusercontent.com/79740895/233056542-f9587df2-4b5b-4094-b0a5-a3461876b12a.png">
+
+copy that and convert to raw data and save and change the header to `89 50 4E 47 0D 0A 1A 0A` and save as .png there is flag in this image.
+
+```
+flag: CHCTF{Th3_most_pow3rful_motivator_in_th3_world_is_r3v3ng3}
 ```
 
 
