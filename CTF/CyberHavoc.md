@@ -18,7 +18,7 @@ FLAG FORMAT: `CHCTF{}`
 - [The Cryptic Sound](#The-Cryptic-Sound)
 
 ### Web
-- [Tyrell's Password Maze](#Tyrell's Password Maze)
+- [Tyrell's Password Maze](#Tyrell's-Password-Maze)
 
 
 
