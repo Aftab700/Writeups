@@ -14,6 +14,9 @@ FLAG FORMAT: `CHCTF{}`
 - [The Beginning Of All](#The-Beginning-Of-All)
 - [Leaked Convo](#Leaked-Convo)
 
+### Digital Forensics
+- [The Cryptic Sound](#The-Cryptic-Sound)
+
 
 
 ## Reverse Engineering
@@ -109,5 +112,29 @@ It is rot 47 with n=81. and flag is in rot13.
 ```
 flag: CHCTF{175_71M3_70_574r7_7H3_W4r}
 ```
+
+
+
+
+
+
+<br>
+
+--------------------
+
+## Digital Forensics
+
+### The Cryptic Sound
+
+file: [Right or Wrong.wav](https://github.com/Manoj-Mukund/files/blob/main/Right%20or%20Wrong.wav)
+
+it is morse code in audio 
+
+tool used: https://morsecode.world/international/decoder/audio-decoder-adaptive.html
+
+```
+flag: CHCTF{BONSOIRELLIOT}
+```
+
 
 
