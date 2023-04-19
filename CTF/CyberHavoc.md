@@ -103,6 +103,8 @@ flag: CHCTF{5URR3ND3R_0R_5UFF3R}
 
 ### Leaked Convo
 
+<!--  {% raw %} --> 
+
 given text:
 ```
 duv#r!|"rG Xrr} (|$! %|vpr y|&; Znxr "$!r {| |{r urn!" $";
@@ -111,6 +113,8 @@ Yr|{G R%r!(#uv{t v" "r#; aur }n(y|nq" n!r "r#; aur #n!tr#" n!r sv'rq; V#â" 
 duv#r!|"rG aur p|{pr}# |s &nv#v{t or&vyqr!" zr; ]b]T`*>DBlD>g@lD=lBDArDlDb@lWAr,; dr {rrq #| xrr} !|#n#v{t |$! p|{%r!"n#v|{ "| #un# {|#uv{t tr#" yrnxrq;
 a(!ryyG [|#rq.
 ```
+
+<!--  {% endraw %} --> 
 
 It is rot 47 with n=81. and flag is in rot13.
 
