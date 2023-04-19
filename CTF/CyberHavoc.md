@@ -8,19 +8,19 @@ FLAG FORMAT: `CHCTF{}`
 ## Challenges
 
 ### Reverse Engineering
-- [Start The Dos](#Start-The-dos)
+- [Start The Dos](#start-the-dos)
 
 ### Crypto
-- [The Beginning Of All](#The-Beginning-Of-All)
-- [Leaked Convo](#Leaked-Convo)
-- [Top Password](#Top-Password)
+- [The Beginning Of All](#the-beginning-of-all)
+- [Leaked Convo](#leaked-convo)
+- [Top Password](#top-password)
 
 ### Digital Forensics
-- [The Cryptic Sound](#The-Cryptic-Sound)
-- [Dump Digging](#Dump-Digging)
+- [The Cryptic Sound](#the-cryptic-sound)
+- [Dump Digging](#dump-digging)
 
 ### Web
-- [Tyrell's Password Maze](#Tyrells-Password-Maze)
+- [Tyrell's Password Maze](#tyrells-password-maze)
 
 
 
