@@ -17,7 +17,7 @@ https://cyberheroines.ctfd.io/
 
 ### Web
 
-- [Grace Hopper](Grace-Hopper)
+- [Grace Hopper](#Grace-Hopper)
 
 </br>
 
