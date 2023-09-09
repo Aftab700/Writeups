@@ -15,6 +15,10 @@ https://cyberheroines.ctfd.io/
 
 - [Sophie Wilson](#Sophie-Wilson)
 
+### Web
+
+- [Grace Hopper](Grace-Hopper)
+
 </br>
 
 -------------------
@@ -60,10 +64,32 @@ print(long_to_bytes(int(m)))
 
 flag: `chctf{d3516n3d_4c0rn_m1cr0_c0mpu73r}`
 
+</br>
 
+## Web
 
+### Grace Hopper
 
+Description:
+```
+Grace Brewster Hopper (née Murray; December 9, 1906 – January 1, 1992) was an American computer scientist, mathematician, and United States Navy rear admiral. One of the first programmers of the Harvard Mark I computer, she was a pioneer of computer programming who invented one of the first linkers. Hopper was the first to devise the theory of machine-independent programming languages, and the FLOW-MATIC programming language she created using this theory was later extended to create COBOL, an early high-level programming language still in use today. - Wikipedia Entry
 
+Chal: Command this webapp like this Navy Real Admiral
+
+Alternate (Better) Connection: webapp
+
+Author: Sandesh
+```
+
+Link: https://cyberheroines-web-srv2.chals.io/vulnerable.php
+
+On this site we can execute few commands on running `dir` command we can see all files:
+
+<img width="583" alt="image" src="https://github.com/Aftab700/Writeups/assets/79740895/b1b5bd6a-1b58-44fb-a0d4-9b2fbc6faf23">
+
+The flag is in the `https://cyberheroines-web-srv2.chals.io/cyberheroines.sh` file.
+
+flag: `CHCTF{t#!$_!s_T#3_w@Y}`
 
 
 
