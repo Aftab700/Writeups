@@ -21,7 +21,7 @@ https://cyberheroines.ctfd.io/
 
 ### Forensics
 
-- [Barbara Liskov](Barbara-Liskov)
+- [Barbara Liskov](#Barbara-Liskov)
 
 </br>
 
