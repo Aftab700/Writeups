@@ -19,6 +19,10 @@ https://cyberheroines.ctfd.io/
 
 - [Grace Hopper](#Grace-Hopper)
 
+### Forensics
+
+- [Barbara Liskov](Barbara-Liskov)
+
 </br>
 
 -------------------
@@ -90,6 +94,34 @@ On this site we can execute few commands on running `dir` command we can see all
 The flag is in the `https://cyberheroines-web-srv2.chals.io/cyberheroines.sh` file.
 
 flag: `CHCTF{t#!$_!s_T#3_w@Y}`
+
+
+</br>
+
+
+## Forensics
+
+### Barbara Liskov
+
+Description:
+```
+Barbara Liskov (born November 7, 1939 as Barbara Jane Huberman) is an American computer scientist who has made pioneering contributions to programming languages and distributed computing. Her notable work includes the development of the Liskov substitution principle which describes the fundamental nature of data abstraction, and is used in type theory (see subtyping) and in object-oriented programming (see inheritance). Her work was recognized with the 2008 Turing Award, the highest distinction in computer science. - Wikipedia Entry
+
+Chal: Return the flag back to the 2008 Turing Award Winner
+
+Author: Josh
+```
+
+file: BarbaraLiskov.pyc
+
+In this file we can see one Base64 text: `Y2hjdGZ7dV9uM3Yzcl9uMzNkXzBwdDFtNGxfcDNyZjBybTRuYzMsX3VfbjMzZF9nMDBkLTNuMHVnaF9wM3JmMHJtNG5jM30=` this is the flag.
+
+flag: `chctf{u_n3v3r_n33d_0pt1m4l_p3rf0rm4nc3,_u_n33d_g00d-3n0ugh_p3rf0rm4nc3}`
+
+</br>
+
+
+
 
 
 
