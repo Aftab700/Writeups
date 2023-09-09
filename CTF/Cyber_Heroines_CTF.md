@@ -22,6 +22,7 @@ https://cyberheroines.ctfd.io/
 ### Forensics
 
 - [Barbara Liskov](#Barbara-Liskov)
+- [Margaret Hamilton](#Margaret-Hamilton)
 
 </br>
 
@@ -120,9 +121,24 @@ flag: `chctf{u_n3v3r_n33d_0pt1m4l_p3rf0rm4nc3,_u_n33d_g00d-3n0ugh_p3rf0rm4nc3}`
 
 </br>
 
+### Margaret Hamilton
 
+Description:
+```
+[Margaret Elaine Hamilton](https://en.wikipedia.org/wiki/Margaret_Hamilton_(software_engineer) (née Heafield; born August 17, 1936) is an American computer scientist, systems engineer, and business owner. She was director of the Software Engineering Division of the MIT Instrumentation Laboratory, which developed on-board flight software for NASA's Apollo program. She later founded two software companies—Higher Order Software in 1976 and Hamilton Technologies in 1986, both in Cambridge, Massachusetts. - [Wikipedia Entry](https://en.wikipedia.org/wiki/Margaret_Hamilton_(software_engineer)
 
+Chal: Return the flag to NASAs first software engineer.
 
+Author: Rusheel
+```
+file: [Apollo-Mystery.jpg](files/Apollo-Mystery.jpg)
 
+This is archive file open this with 7zip and there is a new image `margaret_flag.png` it have flag in it.
+
+<img width="501" alt="image" src="https://github.com/Aftab700/Writeups/assets/79740895/8e6aeb0b-054c-495c-8bfa-76fd90eb15ce">
+
+flag: `chctf{i_wr1t3_code_by_h4nd}`
+
+</br>
 
 
