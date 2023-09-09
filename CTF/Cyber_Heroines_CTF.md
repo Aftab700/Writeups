@@ -13,7 +13,7 @@ https://cyberheroines.ctfd.io/
 
 ### Crypto
 
-- [Sophie Wilson](#Sophie%20Wilson)
+- [Sophie Wilson](#Sophie-Wilson)
 
 </br>
 
