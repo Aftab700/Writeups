@@ -36,5 +36,9 @@ flag: `^FLAG^05f132dbc0e8a0cbb312952e6703e8f4703e921669676a096b385a49b34c94b2$FL
 
 number of flag: 4
 
+Here we have functionality to create page in that using the payload: `<img src=xx onerror=alert(1)>` will create an alert pop-up and it will give us the first flag in source code.
+
+flag: `^FLAG^94f26fe56dec79812241c348ed6b5718a9e00fc2df643403fef30f6c0e8faee1$FLAG$`
+
 
 
