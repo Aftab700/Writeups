@@ -5,8 +5,8 @@ plugins:
   - jekyll-seo-tag
   - jekyll-remote-theme
 markdown: kramdown
-#kramdown:
-#  parse_block_html: true
+kramdown:
+  parse_block_html: true
 title: "Writeups"
 description: "This repository contains writeups for HTB , different CTFs and other challenges."
 google_analytics: G-VSNWH55C79
