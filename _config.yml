@@ -9,5 +9,5 @@ kramdown:
   parse_block_html: true
 title: "Writeups"
 description: "This repository contains writeups for HTB , different CTFs and other challenges."
-google_analytics: G-439HC2STTB
+google_analytics: UA-227671434-1
 
