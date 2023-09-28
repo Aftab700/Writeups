@@ -2,7 +2,7 @@
 
 > ClouSEK's CTF challenge during NULLCON 2023
 
-</br>
+<br />
 
 ## Challenges
 
@@ -13,11 +13,11 @@
 - [Serialization Saga](#Serialization-Saga)
 - [The SHA Juggler](#The-SHA-Juggler)
 
-</br>
+<br />
 
 ------------------------
 
-</br>
+<br />
 
 ## Bases
 
@@ -286,7 +286,7 @@ list index out of range
 
 Flag: `CSEK{3he_bas3_dec04er}`
 
-</br>
+<br />
 
 ## Serialization Saga
 
@@ -402,7 +402,7 @@ https://webctf.cloudsek.com/serialization-saga?sess=Tzo4OiJDbG91ZFNFSyI6Mjp7czo3
 
 Flag: `CSEK{PhP_0Bj3CT_D3$3R1L1Z@T10N}`
 
-</br>
+<br />
 
 ## The SHA Juggler
 
@@ -473,6 +473,6 @@ https://webctf.cloudsek.com/the-sha-juggler/you_found_me.php?hash=aaroZmOk
 Flag: `CSEK{typ3_juggl1ng_1n_php}`
 
 
-</br>
+<br />
 
 :octocat: Happy Hacking :octocat:

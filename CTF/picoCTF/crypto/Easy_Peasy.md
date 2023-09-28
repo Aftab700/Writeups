@@ -65,7 +65,7 @@ while c >= 0:
 ```
 </details>
 
-<br>
+<br />
 
 one-time pad is unbreakable only if you don't use the same key twice. this code is like sliding window next message is encrypted from the end of last messages length in key file and we can find the loop hole in this part of the code.
 ```python
@@ -117,7 +117,7 @@ conn.close()
 <!-- {::options parse_block_html="true" /}  -->
 </details>
 
-<br>
+<br />
 
 ```
 flag: picoCTF{75302b38697a8717f0faee9c0fd36a57}

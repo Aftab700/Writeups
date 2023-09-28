@@ -29,11 +29,11 @@ https://ctf.lagncra.sh/challenges
 ### Boot to root
 - [Pickle Rick](#pickle-rick)
 
-<br>
+<br />
 
 -------
 
-<br>
+<br />
 
 ## Web
 
@@ -67,7 +67,7 @@ Payload: `-->{{ self.__init__.__globals__.__builtins__.__import__('os').popen('c
 flag: LNC2023{T3mpl4t35_4r3_c00L_bUt_d4nG3r0u5_776843}
 ```
 
-<br>
+<br />
 
 ### The Password
 
@@ -84,11 +84,11 @@ flag: LNC2023{s0m3t1me$_1t_i5_pr377y_s1aY}
 ```
 
 
-<br>
+<br />
 
 ----------
 
-<br>
+<br />
 
 ## Crypto
 
@@ -104,7 +104,7 @@ It is Base32 > Rot 10(Rot13 with n=10)
 flag:  LNC2023{dumbdumb}
 ```
 
-<br>
+<br />
 
 ### Zig Zag
 
@@ -120,7 +120,7 @@ Decoder for reference: https://www.dcode.fr/rail-fence-cipher
 flag: LNC2023{THISWASQUITEOBVIOUS}
 ```
 
-<br>
+<br />
 
 ### Hope
 
@@ -148,11 +148,11 @@ flag: LNC2023{DETERMINED}
 
 
 
-<br>
+<br />
 
 ---------
 
-<br>
+<br />
 
 ## Forensics
 
@@ -174,7 +174,7 @@ open this image with notepad there is flag.
 flag:  LNC2023{ayaka_is_key}
 ```
 
-<br>
+<br />
 
 ### Wave
 
@@ -192,7 +192,7 @@ Tool used: Sonic Visualizer
 flag: LNC2023{annoyingwave}
 ```
 
-<br>
+<br />
 
 ### Incompetent
 
@@ -244,11 +244,11 @@ flag: LNC2023{S3cr3tF1aG}
 
 
 
-<br>
+<br />
 
 -------
 
-<br>
+<br />
 
 ## Reverse
 
@@ -281,11 +281,11 @@ flag: LNC2023{s1mpl3_4m_1_r1ghT?}
 
 
 
-<br>
+<br />
 
 --------
 
-<br>
+<br />
 
 ## Misc
 
@@ -311,7 +311,7 @@ less command also works. ` cat 1.txt |less `
 flag: LNC2023{ans1_c0ntr0l_s3qu3nc3s_damn_c00l}
 ```
 
-<br>
+<br />
 
 ### Swiftly
 
@@ -335,11 +335,11 @@ flag: LNC2023{Are_y0u_FaSt_En0ugh_4_th1s}
 
 
 
-<br>
+<br />
 
 ----------
 
-<br>
+<br />
 
 ## Boot to root
 

@@ -67,7 +67,7 @@ img.save('flag.png')
 ```
 </details>
 
-<br>
+<br />
 
 flag.png:
 
@@ -75,7 +75,7 @@ flag.png:
 
 `GLUG{Y0u_4Re_noT_5o_w34k}`
 
-<br>
+<br />
 
 #### funwithrandom-1:
 

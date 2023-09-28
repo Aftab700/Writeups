@@ -57,7 +57,7 @@ print("}")
 flag:  CHCTF{L33T_CR4CK3R_5TR1K3S_4G41N}
 ```
 
-<br>
+<br />
 
 
 
@@ -71,7 +71,7 @@ flag:  CHCTF{L33T_CR4CK3R_5TR1K3S_4G41N}
 
 
 
-<br>
+<br />
 
 -------------------------------------
 
@@ -99,7 +99,7 @@ After decoding we get this: `CHCTF5URR3ND3R 0R 5UFF3R`
 flag: CHCTF{5URR3ND3R_0R_5UFF3R}
 ```
 
-<br>
+<br />
 
 ### Leaked Convo
 
@@ -122,7 +122,7 @@ It is rot 47 with n=81. and flag is in rot13.
 flag: CHCTF{175_71M3_70_574r7_7H3_W4r}
 ```
 
-<br>
+<br />
 
 ### Top Password
 
@@ -146,7 +146,7 @@ flag: CHCTF{DESTRUCTION_AT_PEAK}
 
 
 
-<br>
+<br />
 
 --------------------
 
@@ -164,7 +164,7 @@ tool used: https://morsecode.world/international/decoder/audio-decoder-adaptive.
 flag: CHCTF{BONSOIRELLIOT}
 ```
 
-<br>
+<br />
 
 ### Dump Digging
 
@@ -187,7 +187,7 @@ flag: CHCTF{Th3_most_pow3rful_motivator_in_th3_world_is_r3v3ng3}
 
 
 
-<br>
+<br />
 
 ---------------------------
 

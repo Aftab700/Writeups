@@ -1,6 +1,6 @@
 # Cyber Heroines CTF
 
-</br>
+<br />
 
 Competition Begins: 5:00 PM EST Sept 8, 2023, 
 Competition Ends: 5:00 PM EST Sept 10, 2023
@@ -24,11 +24,11 @@ https://cyberheroines.ctfd.io/
 - [Barbara Liskov](#Barbara-Liskov)
 - [Margaret Hamilton](#Margaret-Hamilton)
 
-</br>
+<br />
 
 -------------------
 
-</br>
+<br />
 
 
 ## Crypto
@@ -69,7 +69,7 @@ print(long_to_bytes(int(m)))
 
 flag: `chctf{d3516n3d_4c0rn_m1cr0_c0mpu73r}`
 
-</br>
+<br />
 
 ## Web
 
@@ -97,7 +97,7 @@ The flag is in the `https://cyberheroines-web-srv2.chals.io/cyberheroines.sh` fi
 flag: `CHCTF{t#!$_!s_T#3_w@Y}`
 
 
-</br>
+<br />
 
 
 ## Forensics
@@ -119,7 +119,7 @@ In this file we can see one Base64 text: `Y2hjdGZ7dV9uM3Yzcl9uMzNkXzBwdDFtNGxfcD
 
 flag: `chctf{u_n3v3r_n33d_0pt1m4l_p3rf0rm4nc3,_u_n33d_g00d-3n0ugh_p3rf0rm4nc3}`
 
-</br>
+<br />
 
 ### Margaret Hamilton
 
@@ -139,6 +139,6 @@ This is archive file open this with 7zip and there is a new image `margaret_flag
 
 flag: `chctf{i_wr1t3_code_by_h4nd}`
 
-</br>
+<br />
 
 
