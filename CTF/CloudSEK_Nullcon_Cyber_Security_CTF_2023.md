@@ -39,7 +39,7 @@ Looking at the challenge category (`Scripting`), we can figure out that this pro
 
 <details><summary markdown="span">Click to see python code :diamond_shape_with_a_dot_inside: </summary>
 
-```Python
+```python
 from pwn import *
 
 conn = remote('43.204.152.119', 1337)

@@ -55,7 +55,7 @@ Here the `e` is small and n is too large, so `m^e < N`
 We can get the message by just doing 5th root of `c`.
 
 Python code:
-```Python
+```python
 import gmpy2
 from Cryptodome.Util.number import long_to_bytes
 
