@@ -1,8 +1,9 @@
-theme: hacker
+remote_theme: pages-themes/hacker@v0.2.0
 plugins:
   - jemoji
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-remote-theme
 markdown: kramdown
 kramdown:
   parse_block_html: true
