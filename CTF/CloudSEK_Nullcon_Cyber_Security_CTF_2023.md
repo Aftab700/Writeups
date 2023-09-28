@@ -33,7 +33,9 @@ Description:
 When connecting to the server we are given with Base64 encoded text and we have to submit the Base64 decoded text in the input but doing so it keep asking
 for new Base64 text
 
-<img width="623" alt="image" src="https://github.com/Aftab700/Private_files/assets/79740895/4a04002b-028c-47af-80a0-2cc3ff6c273d">
+
+![image](https://github.com/Aftab700/Writeups/assets/79740895/aac2df14-9be2-4a4c-a9cf-ade5dccf249a)
+
 
 Looking at the challenge category (`Scripting`), we can figure out that this process requires automation with the use of any scripting language. I'm am using  Python here
 
@@ -299,7 +301,9 @@ Description:
 
 On the webpage we can see the php code
 
-<img width="478" alt="image" src="https://github.com/Aftab700/Private_files/assets/79740895/727199bb-3dae-402b-9f4a-cf799560d186">
+
+![image](https://github.com/Aftab700/Writeups/assets/79740895/f610570a-6070-4f62-b5ba-b84f0f129bfc)
+
 
 <details><summary markdown="span">Click to see PHP code :diamond_shape_with_a_dot_inside: </summary>
 
@@ -373,7 +377,9 @@ $obj = unserialize($data);
 ```
 </details>
 
-<img width="241" alt="image" src="https://github.com/Aftab700/Private_files/assets/79740895/6cab5aac-8f77-4a18-9927-e1183d81a651">
+
+![image](https://github.com/Aftab700/Writeups/assets/79740895/614e9955-4dfe-4861-93dc-727be8da744a)
+
 
 In this code we can see that it is checking if GET parameter `sess` exist if yes Base64 decode it and parse it to php unserialize() 
 
@@ -381,7 +387,8 @@ There is also  `__wakeup()` function which is called on unserialize
 
 to get the flag we have to call `GetMeDemFlagz` function. __wakeup function will perform rot13 on `func_name` and value of `func_no` should be index of the name of function in `func_map` array.
 
-<img width="147" alt="image" src="https://github.com/Aftab700/Private_files/assets/79740895/0567baa2-1731-4324-a816-05e84f701de8">
+
+![image](https://github.com/Aftab700/Writeups/assets/79740895/26d57175-a6e9-4afa-a12d-265deadf4863)
 
 Now lets create the payload
 
@@ -398,7 +405,8 @@ Base64 decode this and put it in GET parameter `sess`
 https://webctf.cloudsek.com/serialization-saga?sess=Tzo4OiJDbG91ZFNFSyI6Mjp7czo3OiJmdW5jX25vIjtpOjM7czo5OiJmdW5jX25hbWUiO3M6MTM6IlRyZ1pyUXJ6U3ludG0iO30=
 ```
 
-<img width="331" alt="image" src="https://github.com/Aftab700/Private_files/assets/79740895/a913e5f5-b94f-44cd-8c15-a0c4eaea3f54">
+
+![image](https://github.com/Aftab700/Writeups/assets/79740895/828ee104-9265-40a6-980d-7bd5e97a6a9f)
 
 Flag: `CSEK{PhP_0Bj3CT_D3$3R1L1Z@T10N}`
 
