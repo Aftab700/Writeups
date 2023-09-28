@@ -72,7 +72,7 @@ conn.close()
 
 <details><summary markdown="span">Click to see output :diamond_shape_with_a_dot_inside: </summary>
 
-```Powershell
+```powershell
 PS D:\GitHub\ctf> python .\1.py
 [x] Opening connection to 43.204.152.119 on port 1337
 [x] Opening connection to 43.204.152.119 on port 1337: Trying 43.204.152.119
@@ -303,7 +303,7 @@ On the webpage we can see the php code
 
 <details><summary markdown="span">Click to see PHP code :diamond_shape_with_a_dot_inside: </summary>
 
-```Php
+```php
 <?php
 
 error_reporting(0);
@@ -427,7 +427,7 @@ after decoding it with hex and Base64 we get php code
 
 <details><summary markdown="span">Click to see code :diamond_shape_with_a_dot_inside: </summary>
 
-```Php
+```php
 <?php
 // you_found_me.php
 if (isset($_GET['hash'])) {

