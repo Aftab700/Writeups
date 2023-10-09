@@ -2,6 +2,7 @@
 # CTF Writeups
 
 
+- [CloudSEK - BSides Cyber Security CTF 2023](CloudSEK_BSides_Cyber_Security_CTF_2023.md)
 - [CloudSEK - Nullcon Cyber Security CTF 2023](CloudSEK_Nullcon_Cyber_Security_CTF_2023.md)
 - [The Hacker101 CTF](The_Hacker101_CTF.md)
 - [Cyber Heroines CTF](Cyber_Heroines_CTF.md)
