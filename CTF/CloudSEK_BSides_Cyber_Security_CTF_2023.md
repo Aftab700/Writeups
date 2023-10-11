@@ -11,7 +11,7 @@
 
 ### CloudSEK's Digital Supply Chain Security Solution (BeVigil)
 - [Illusive Mind with Illusive Thoughts](#Illusive-Mind-with-Illusive-Thoughts)
-- [3](#3)
+- [Hack the Wires](#Hack-the-Wires)
 
 
 <br>
@@ -385,7 +385,7 @@ Flag: `CloudSEK_BeVigil-{db_admin:admin@987}`
 
 <br>
 
-## 3
+## Hack the Wires
 
 Points: 100
 
@@ -433,7 +433,7 @@ for the seconde step let's understand the regex
 
 for example: `https://bevigil.com/a` this will match the regex
 
-but trying LFI in this dosenot work so i will use [online php editor](https://tio.run/#php) to debug the payload
+but trying LFI in this dose not work so i will use [online php editor](https://tio.run/#php) to debug the payload
 
 In this online editor i'm using payload=`echo file_get_contents("https://bevigil.com/../../.code.tio");`\
 In the debug section we can see following warning:
