@@ -11,6 +11,7 @@
 
 ### CloudSEK's Digital Supply Chain Security Solution (BeVigil)
 - [Illusive Mind with Illusive Thoughts](#Illusive-Mind-with-Illusive-Thoughts)
+- [3](#3)
 
 
 <br>
@@ -384,4 +385,73 @@ Flag: `CloudSEK_BeVigil-{db_admin:admin@987}`
 
 <br>
 
-## 
+## 3
+
+Points: 100
+
+- Recently, we got an email from an anonymous person reporting that a Hacker has setted a proxy for Bevigil which allows anyone from the internet to use Bevigil for Free and Unlimited. He might has Stolen a session cookie from our internal CloudSters and used that in the proxy. We blindly can’t expire all the session’s cookies for user experience, so we need to figure out the Particular session cookie and expire that only.
+- The anonymous person has also shared an android application naming Bevigil for Free and Unlimited hosted at BeVigil where an attacker has stored the Proxy URL in the app’s assets [IPs, URLs, Hostnames, etc] & his details for publicity stunt.
+- Could you help us to find out the same cookie so that we can revoke it as soon as possible!!
+- https://bevigil.com/report/com.intl.bevigilunlimited
+
+In [this](https://bevigil.com/report/com.intl.bevigilunlimited) report after looking in assets we get [this file](https://bevigil.com/src/com.intl.bevigilunlimited/source%2Fresources%2Fres%2Fvalues%2Fstrings.xml) `com.intl.bevigilunlimited/source/resources/res/values/strings.xml` which contains the proxy URL
+
+In this xml file we get this url:
+
+```xml
+<string name="proxyUrlBackup">https://webctf.cloudsek.com/hack-in-the-wires</string>
+```
+
+In the source code of this given url we get the following comment:
+
+```html
+<!--
+  $cookie = file_get_contents("/cookies.txt");
+  if ($_GET['getData']){
+      if(preg_match("/^http.[:]\/\/(bevigil.com\/)./", $_GET['url'];)){
+          $response = file_get_contents($_GET['url'];, false, $cookiesAndHeaders);
+      }else{
+          $response = false;
+      }
+
+  }-->
+```
+
+by analyzing this php code we can divide this process in 3 steps
+1. GET parameter `getData=true` to satisfy the first if condition
+2. value of GET parameter `url` should match the regex `^http.[:]\/\/(bevigil.com\/).`
+3. use LFI in `url` parameter to read the `/cookies.txt`
+
+first condition is easy just include `getData=true` in GET request
+
+for the seconde step let's understand the regex
+- `^http`: it means the string should start with `http`
+- following `.` means any one character
+- `\/\/` it means `//`
+- `(bevigil.com\/)` it means a group in first it start with `bevigil` + `.` meaning any one character + `com` + `/`
+- last `.` meaning any character
+
+for example: `https://bevigil.com/a` this will match the regex
+
+but trying LFI in this dosenot work so i will use [online php editor](https://tio.run/#php) to debug the payload
+
+In this online editor i'm using payload=`echo file_get_contents("https://bevigil.com/../../.code.tio");`\
+In the debug section we can see following warning:
+
+```
+PHP Warning:  file_get_contents(): Unable to find the wrapper "https" - did you forget to enable it when you configured PHP? in /home/runner/.code.tio on line 3
+```
+ It is trying to parse the http protocall so now we have make sure it dose not identify our payload as http url so we can read the local file\
+ for this we have `.` in regex after http so first i tried different characters like `httpq`, `httpd` but it still identify it as http\
+ then i tried special characters, `:` works now in editor payload=`echo file_get_contents("http:://bevigil.com/../../.code.tio");` works so now we just need to try
+ few `../` to get `/cookies.txt`
+
+finally the payload=`http:://bevigil.com/../../../../../cookies.txt` give us the flag
+
+```
+https://webctf.cloudsek.com/hack-in-the-wires?getData=true&url=http:://bevigil.com/../../../../../cookies.txt
+```
+
+Flag: `CloudSEK{3FI_i$_C00!}`
+
+<br>
