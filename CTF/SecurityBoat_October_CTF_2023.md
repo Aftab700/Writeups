@@ -36,7 +36,11 @@ payload:`O:20:"GetThemeNameFromFile":1:{s:8:"filename";s:10:"/home/flag";}`
 <img width="760" alt="image" src="https://github.com/Aftab700/Writeups/assets/79740895/080230a4-5b66-438f-a9d4-a0b98a762667">
 
 But it not the correct flag\
-When submitting the wrong flag hint is given: `That is rabbit hole with wrong path. Please try on other different popular paths as well😊`
+When submitting the wrong flag hint is given: 
+
+```
+That is rabbit hole with wrong path. Please try on other different popular paths as well😊
+```
 
 So when trying different paths we get one more flag at `/etc/flag`
 
