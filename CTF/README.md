@@ -4,7 +4,7 @@
 
 - [SecurityBoat October CTF 2023](ctfs/SecurityBoat_October_CTF_2023.md)
 - [CloudSEK - BSides Cyber Security CTF 2023](ctfs/CloudSEK_BSides_Cyber_Security_CTF_2023.md)
-- [CloudSEK - Nullcon Cyber Security CTF 2023](ctf/CloudSEK_Nullcon_Cyber_Security_CTF_2023.md)
+- [CloudSEK - Nullcon Cyber Security CTF 2023](ctfs/CloudSEK_Nullcon_Cyber_Security_CTF_2023.md)
 - [The Hacker101 CTF](ctfs/The_Hacker101_CTF.md)
 - [Cyber Heroines CTF](ctfs/Cyber_Heroines_CTF.md)
 - [CyberHavoc CTF 2023](ctfs/CyberHavoc.md)
