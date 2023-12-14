@@ -17,6 +17,7 @@
 
 ## MISC
 - [D3CODE2](#D3CODE2)
+- [Decrypt the Hidden Message](#decrypt-the-hidden-message)
 
 <br>
 
@@ -151,5 +152,15 @@ After decoding all these encodings we get the flag
 
 Flag: `IWCON{y0u_g0t_th4t_r16h7!}`
 
+### Decrypt the Hidden Message
 
+- 🔍Howdy, Cyber Sleuths! Gather 'round for the "Crypto Starter Challenge" in the world of Codeburg. Two mysterious figures, Cipher Steve and Enigma Emily, have shared an image.Rumor has it there's more to it than meets the eye – a hidden treasure waiting to be discovered.
+- Your Mission: If you choose to accept, is to break through the cryptographic cloak and unveil the concealed message. It's time to play "crypto detective" and decode the secrets these mysterious figures have tucked away.
+- Flag Format: iwconctf{}
+- Author: Priyatham
+- File: [hidden.jpeg](../files/hidden.jpeg)
+
+open this file with text editor flag is in text format
+
+Flag: `iwconctf{tr3asur3_9n_7h3_95land}`
 
