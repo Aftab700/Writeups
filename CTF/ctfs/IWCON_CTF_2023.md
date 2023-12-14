@@ -11,13 +11,19 @@
 - [Socialize](#socialize)
 - [runme](#runme)
 
+## Crypto
+- [Rota23r](#rota23r)
+
+
 <br>
 
 ---------------------------
 
 <br>
 
-## Socialize
+## WARMUP
+
+### Socialize
 
 - Learn to socialize!
 - https://discord.gg/H7sQx76n
@@ -30,7 +36,7 @@ Flag is in `iwcon-ctf` channel
 Flag: `IWCON{y0u_w3r3_h3r3_f!rst}`
 
 
-## runme
+### runme
 
 - code me!
 - Flag format: IWCON{}
@@ -79,6 +85,46 @@ public static void main(String[] var0) {
 <img width="586" alt="image" src="https://github.com/Aftab700/Writeups/assets/79740895/5887d9de-d232-4534-8825-6c621f3551bc">
 
 Flag: `IWCON{y0u_4r3_a_r3v3rs3_3ngin33r}`
+
+## Crypto
+
+### Rota23r
+
+```
+📣Nggragvba unpxref!
+VJPBA 2023 PGS fgnegf ba 🗓14gu Qrprzore 2023, ⌚5:30 CZ VFG.
+Rkpvgvat cevmrf gb or jba🎁🏆
+Vs lbh unira'g lrg ertvfgrerq, ertvfgre Abj: uggcf://pgs.vjpba.yvir
+ernq gur ehyrf
+
+Flag format: IWCON{}
+```
+
+this is rot13 and it decodes to
+
+```
+Attention hackers!
+IWCON 2023 CTF starts on ð14th December 2023, â5:30 PM IST.
+Exciting prizes to be wonðð
+If you haven't yet registered, register Now: https://ctf.iwcon.live
+read the rules
+```
+
+in the source code of rules page we can see this comment
+
+<img width="165" alt="image" src="https://github.com/Aftab700/Writeups/assets/79740895/3318cae8-6b9f-4b78-8e7d-ab0e86514c56">
+
+this is rot13 of `M0V_M3_T0_G3T_TH3_FL4G`
+
+Flag: `IWCON{M0V_M3_T0_G3T_TH3_FL4G}`
+
+
+
+
+
+
+
+
 
 
 
