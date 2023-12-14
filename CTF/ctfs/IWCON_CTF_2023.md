@@ -13,6 +13,7 @@
 
 ## Crypto
 - [Rota23r](#rota23r)
+- [c0l0rcrypt](#c0l0rcrypt)
 
 
 <br>
@@ -119,6 +120,17 @@ this is rot13 of `M0V_M3_T0_G3T_TH3_FL4G`
 Flag: `IWCON{M0V_M3_T0_G3T_TH3_FL4G}`
 
 
+### c0l0rcrypt
+
+- Dive into the world of ChromaCrypt, a mysterious box that conceals messages within encoded color sequences. Unraveling the mapping between colors and characters to unveil the hidden message.
+- Flag format: IWCON{}
+
+<img width="415" alt="c0l0r" src="https://github.com/Aftab700/Writeups/assets/79740895/dc06dae6-c2d9-4ab7-8bdc-4e13e2c1a13b">
+
+This is **Hexahue** cipher https://www.dcode.fr/hexahue-cipher \
+decoded value: HU3H3XACRYPT
+
+Flag: `IWCON{HU3H3XACRYPT}`
 
 
 
