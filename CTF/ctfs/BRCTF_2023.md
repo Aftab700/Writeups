@@ -100,3 +100,6 @@ sudo ansible-playbook $TF
 <img width="402" alt="image" src="https://github.com/Aftab700/Writeups/assets/79740895/0d5ff1cc-cc32-4a21-be83-e8b869dc698d">
 
 <br>
+
+
+:octocat: Happy Hacking :octocat:
