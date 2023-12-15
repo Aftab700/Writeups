@@ -139,6 +139,9 @@ This is archive file open this with 7zip and there is a new image `margaret_flag
 
 flag: `chctf{i_wr1t3_code_by_h4nd}`
 
-<br />
+<br>
 
 
+<br>
+
+:octocat: Happy Hacking :octocat:
