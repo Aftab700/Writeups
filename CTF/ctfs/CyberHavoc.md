@@ -214,3 +214,6 @@ we can see the username, password, and base64 string
 flag: CHCTF{B0n50ir_31107_7hi5_i5_my_kingdom_4nd_y0ur3_ju57_4_vi5i70r}
 ```
 
+<br>
+
+:octocat: Happy Hacking :octocat:
