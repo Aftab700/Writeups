@@ -52,3 +52,6 @@ O:20:"GetThemeNameFromFile":1:{s:8:"filename";s:10:"/home/flag";}
 
 Flag: `Flag{__inS3cur3_d3seR14liz47iOn_ftw}`
 
+<br>
+
+:octocat: Happy Hacking :octocat:
