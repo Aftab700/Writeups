@@ -19,6 +19,7 @@
 - [D3CODE2](#D3CODE2)
 - [Decrypt the Hidden Message](#decrypt-the-hidden-message)
 - [QueueAre](#QueueAre)
+- [Into The Shadows](#into-the-shadows)
 
 <br>
 
@@ -181,7 +182,23 @@ It have this following code at line 161 `<iframe src='SVdDT057WTBVXzRSM180X0czTj
 Flag: `IWCON{Y0U_4R3_4_G3N1US}`
 
 
+### Into The Shadows
 
+- Am I FUNCTIONing right?
+- File: [javascript.zip](https://into-the-shadows.s3.eu-north-1.amazonaws.com/javascript.zip)
+
+In this zip we have tons of js files, so based on my CTF experience i guessed that it would have Base64 of flag so 
+i did recursive grep for `SVdDT05` which is Base64 of `IWCON` (from flag format) 😅
+
+```
+grep -ira "SVdDT05" *
+```
+
+<img width="465" alt="image" src="https://github.com/Aftab700/Writeups/assets/79740895/956b53e2-579c-488d-a94f-60ee00afb8b0">
+
+Here we can see the Base64 encoded flag.
+
+Flag: `IWCON{hi33d3n_in_th3_shad0ws}`
 
 
 
