@@ -171,7 +171,7 @@ Flag: `iwconctf{tr3asur3_9n_7h3_95land}`
 - Flag format: IWCON{}
 - File: [QueueAre.zip](../files/QueueAre.zip)
 
-This zip file have 9 images of partial qr code i used GIMP to organize qr code 
+This zip file have 9 images of partial qr code, i used GIMP to organize qr code 
 
 ![image](https://github.com/Aftab700/Writeups/assets/79740895/45e3c320-269e-4be4-a3a8-8a25daae195d)
 
