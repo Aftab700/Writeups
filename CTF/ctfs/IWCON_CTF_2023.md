@@ -20,6 +20,7 @@
 - [Decrypt the Hidden Message](#decrypt-the-hidden-message)
 - [QueueAre](#QueueAre)
 - [Into The Shadows](#into-the-shadows)
+- [Survival](#survival)
 
 <br>
 
@@ -200,5 +201,14 @@ Here we can see the Base64 encoded flag.
 
 Flag: `IWCON{hi33d3n_in_th3_shad0ws}`
 
+### Survival
 
+- Survival of the fittest!
+- Password hash: `5E536069E1B0D86997C06889B734BD8FAAFEECEC9083AAFECA79F787C875F787B740418D57E5B352`
+- Hint: CVE-2022-25012
+
+This CVE is about Argus Surveillance DVR 4.0 - Weak Password Encryption using this [PoC](https://github.com/s3l33/CVE-2022-25012/blob/main/CVE-2022-25012.py)
+we get the flag
+
+Flag: `IWCON{y0u_survived?}`
 
