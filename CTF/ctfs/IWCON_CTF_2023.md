@@ -18,6 +18,7 @@
 ## MISC
 - [D3CODE2](#D3CODE2)
 - [Decrypt the Hidden Message](#decrypt-the-hidden-message)
+- [QueueAre](#QueueAre)
 
 <br>
 
@@ -163,4 +164,24 @@ Flag: `IWCON{y0u_g0t_th4t_r16h7!}`
 open this file with text editor flag is in text format
 
 Flag: `iwconctf{tr3asur3_9n_7h3_95land}`
+
+### QueueAre
+
+- Follow the 'R'abbit in a 'Q'
+- Flag format: IWCON{}
+- File: [QueueAre.zip](../files/QueueAre.zip)
+
+This zip file have 9 images of partial qr code i used GIMP to organize qr code 
+
+![image](https://github.com/Aftab700/Writeups/assets/79740895/45e3c320-269e-4be4-a3a8-8a25daae195d)
+
+This qr code decode to `https://pastebin.com/3UpH81pz` \
+It have this following code at line 161 `<iframe src='SVdDT057WTBVXzRSM180X0czTjFVU30='>` It is Base64 encoded flag.
+
+Flag: `IWCON{Y0U_4R3_4_G3N1US}`
+
+
+
+
+
 
