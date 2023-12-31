@@ -4,7 +4,7 @@
 
 https://app.hackthebox.com/challenges/lost-modulus
 
-CHALLENGE DESCRIPTION
+CHALLENGE DESCRIPTION:
 _I encrypted a secret message with RSA but I lost the modulus. Can you help me recover it?_
 
 ----------------------
@@ -30,5 +30,7 @@ with gmpy2.local_context(gmpy2.context(), precision=800) as ctx:
 ```
 
 Flag: `HTB{n3v3r_us3_sm4ll_3xp0n3n7s_f0r_rs4}`
+
+<br>
 
 :octocat: Happy Hacking :octocat:
