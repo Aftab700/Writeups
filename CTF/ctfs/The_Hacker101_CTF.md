@@ -10,7 +10,7 @@ https://ctf.hacker101.com/ctf
 - [Micro-CMS v1](#Micro-CMS-v1)
 - [Photo Gallery](#Photo-Gallery)
 - [Cody's First Blog](#Codys-First-Blog)
-- [](#)
+- [Postbook](#Postbook)
 - [](#)
 - [](#)
 - [](#)
@@ -54,6 +54,17 @@ Flag 2: `^FLAG^bd75d9a3aba5709358c413cd1f69819783524094e15dd117c569bdb9f0006a06$
 - php code injection in `Add comment`
 - to auth bypass remove auth from admin.auth.inc
 - to access the injected php code visit `?page=http://localhost/index`
+
+## Postbook
+
+- edit other users post
+- make other user's post private and access private post of other users
+- delete other user's post id is md5
+- session cookie id is md5 of 3 change to 2
+- session cookie id is md5 of 3 change to 1
+- brute force post id 945 give flag 
+- while creating the post change the id in post data to create post as other user
+
 
 
 
