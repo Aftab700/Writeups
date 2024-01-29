@@ -52,4 +52,9 @@ Flag 2: `^FLAG^bd75d9a3aba5709358c413cd1f69819783524094e15dd117c569bdb9f0006a06$
 ## Cody's First Blog
 
 - php code injection in `Add comment`
+- to auth bypass remove auth from admin.auth.inc
+- to access the injected php code visit `?page=http://localhost/index`
+
+
+
 
