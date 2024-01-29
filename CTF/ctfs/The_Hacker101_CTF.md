@@ -8,7 +8,7 @@ https://ctf.hacker101.com/ctf
 
 - [A little something to get you started](#A-little-something-to-get-you-started)
 - [Micro-CMS v1](#Micro-CMS-v1)
-- [](#)
+- [Photo Gallery](#Photo-Gallery)
 - [](#)
 - [](#)
 - [](#)
@@ -41,6 +41,8 @@ Here we have functionality to create page in that using the payload: `<img src=x
 Flag 1: `^FLAG^94f26fe56dec79812241c348ed6b5718a9e00fc2df643403fef30f6c0e8faee1$FLAG$`
 
 Flag 2: `^FLAG^bd75d9a3aba5709358c413cd1f69819783524094e15dd117c569bdb9f0006a06$FLAG$`
+
+## Photo Gallery
 
 
 
