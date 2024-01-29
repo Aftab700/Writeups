@@ -9,7 +9,7 @@ https://ctf.hacker101.com/ctf
 - [A little something to get you started](#A-little-something-to-get-you-started)
 - [Micro-CMS v1](#Micro-CMS-v1)
 - [Photo Gallery](#Photo-Gallery)
-- [](#)
+- [Cody's First Blog](#Codys-First-Blog)
 - [](#)
 - [](#)
 - [](#)
@@ -49,4 +49,7 @@ Flag 2: `^FLAG^bd75d9a3aba5709358c413cd1f69819783524094e15dd117c569bdb9f0006a06$
 - RCE via modifying `filename` column in `photos` table
 
 
+## Cody's First Blog
+
+- php code injection in `Add comment`
 
