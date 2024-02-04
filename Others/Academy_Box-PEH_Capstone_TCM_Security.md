@@ -1,4 +1,4 @@
-# TCM Security - Academy
+# Academy Box - PEH Capstone TCM Security
 > Writeup for Academy machine challenge from PEH course of TCM Security
 
 Challenge File: https://drive.google.com/drive/folders/1VXEuyySgzsSo-MYmyCareTnJ5rAeVKeH
