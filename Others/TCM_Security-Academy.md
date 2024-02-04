@@ -125,7 +125,7 @@ on the `http://192.168.0.113/academy/` page we have one login form
 ![image](https://github.com/Aftab700/Writeups/assets/79740895/8dcd96ba-f63a-4524-9ea6-95156c8ce0df)
 
 
-Let's try the login login credentials `10201321:student` that we found previously from ftp note.
+Let's try the login credentials `10201321:student` that we found previously from ftp note.
 
 ![image](https://github.com/Aftab700/Writeups/assets/79740895/a36b56d4-987e-4e97-834f-f1f0fc105bf4)
 
