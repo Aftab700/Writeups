@@ -10,7 +10,7 @@ Challenge File: https://drive.google.com/drive/folders/1VXEuyySgzsSo-MYmyCareTnJ
 Run `sudo netdiscover -r 192.168.0.0/24` before starting the target VM to capture all available devices in subnet \
 now start the target VM and wait for new machine IP entry it will be the IP of our target VM.
 
-Before starting the target VM 
+Before starting the target VM
 
 ![image](https://github.com/Aftab700/Writeups/assets/79740895/264f4aa5-62fd-47d0-bb51-88a1fe8211e7)
 
