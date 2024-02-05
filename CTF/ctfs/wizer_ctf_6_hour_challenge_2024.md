@@ -4,10 +4,10 @@
 
 ## Challenges
 
-- [JWT Authentication](#JWT-Authentication)
-- [Nginx Configuration](#Nginx-Configuration)
-- [Recipe Book](#Recipe-Book)
-- [Profile Page](#Profile-Page)
+- [JWT Authentication](#jwt-authentication)
+- [Nginx Configuration](#nginx-configuration)
+- [Recipe Book](#recipe-book)
+- [Profile Page](#profile-page)
 
 
 <br>
