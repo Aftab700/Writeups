@@ -27,7 +27,7 @@
           <a href="{{ site.github.repository_url }}" target="_blank" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
           
           {% if page.url != "/" %}
-            <a href="{{ '/' | relative_url }}{{page.url | append: '/../'}}" class="btn"> Back,page.url={{page.url}} </a>
+            <a href="{{ '/' | relative_url }}{{page.url | append: '/../'}}" class="btn"> Back,{{ page.url | relative_url }} </a>
           {% endif %}
         </section>
       </div>
