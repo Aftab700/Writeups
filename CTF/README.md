@@ -2,7 +2,7 @@
 # CTF Writeups
 
 
-- [Wizer CTF 6 Hour Challenge](wizer_ctf_6_hour_challenge_2024.md)
+- [Wizer CTF 6 Hour Challenge](ctfs/wizer_ctf_6_hour_challenge_2024.md)
 - [IWCON CTF 2023](ctfs/IWCON_CTF_2023.md)
 - [BRCTF 2023](ctfs/BRCTF_2023.md)
 - [SecurityBoat October CTF 2023](ctfs/SecurityBoat_October_CTF_2023.md)
