@@ -68,7 +68,7 @@ app.listen(3000, () => {
 ```
 </details>
 
-This app will check if the "token" is present in the request body's JSON data.
+This app will check if the `token` parameter is present in the request body's JSON data.
 
 ![image](https://github.com/Aftab700/Writeups/assets/79740895/4d3fca6b-9060-4393-829b-0c6c4e0be122)
 
@@ -76,12 +76,12 @@ If `token` is present it will Verify the JWT token.
 
 ![image](https://github.com/Aftab700/Writeups/assets/79740895/de844715-31d1-449b-8ea3-6470007a1f16)
 
-It support all JWT algorithms including 'NONE' to verify JWT token, so we can bypass the verification using `NONE` as algorithm. It will accept tokens that have no signature at all.  \
+It support all JWT algorithms including `NONE` to verify JWT token, so we can bypass the verification using `NONE` as algorithm. It will accept tokens that have no signature at all.  \
 Then it will check if `{"access":"flag"}` is present in jwt payload data.
 
 ![image](https://github.com/Aftab700/Writeups/assets/79740895/0000fbad-95fe-49e9-bce5-2f9afc64753a)
 
-now we create jwt token with HEADER (ALGORITHM & TOKEN TYPE): `{"typ":"JWT","alg":"NONE"}` and PAYLOAD (DATA): `{"access":"flag"}`.
+now we create jwt token with HEADER (ALGORITHM & TOKEN TYPE): `{"typ":"JWT","alg":"NONE"}` and PAYLOAD (DATA): `{"access":"flag"}` with blank SIGNATURE.
 
 Payload:
 ```json
