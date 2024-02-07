@@ -241,7 +241,8 @@ Then it will set `document.getElementById("mode").children[0].id = modeParam;` a
 
 Here if we put GET parameter `mode=sw` then we can control the value of `const sw` it will be what we give in GET parameter `color`.
 
-explanation: \
+explanation: 
+
 1. Parameter Retrieval:
 -  `modeParam = searchParams.get('mode')`:  
     -  Stores the value of the query parameter named `mode` in the `modeParam` variable.
@@ -277,7 +278,7 @@ now to craft our serviceWorker take a look at this
 ![image](https://github.com/Aftab700/Writeups/assets/79740895/32e8eeae-7d95-4513-bead-2c04a566bb6e)
 
 
-this will listen for message on BroadcastChannel('recipebook') and it will `alert(event.data.message);`.
+this will listen for message event on BroadcastChannel('recipebook') and it will alert the `message` property of a message.
 
 BroadcastChannel enables communication between different windows, tabs, or workers within the same origin. postMessage() method will trigger the 'message' event on other instances of the BroadcastChannel with the same name.
 
