@@ -239,7 +239,27 @@ Then it will set `document.getElementById("mode").children[0].id = modeParam;` a
 ![image](https://github.com/Aftab700/Writeups/assets/79740895/9545e376-5829-4001-9c7a-5ee1ff4a22fb)
 
 
-Here if we put `modeParam=sw` then we can control the value of `const sw` it will be what we give in colorParam.
+Here if we put GET parameter `mode=sw` then we can control the value of `const sw` it will be what we give in GET parameter `color`.
+
+explanation: \
+1. Parameter Retrieval:
+-  `modeParam = searchParams.get('mode')`:  
+    -  Stores the value of the query parameter named `mode` in the `modeParam` variable.
+-   `colorParam = searchParams.get("color")`:
+    -  Similarly, retrieves the value of the `color` parameter and stores it in `colorParam`.
+
+2. Element Updates:
+-  ` document.getElementById("mode").children[0].id = modeParam;`:
+    -  Finds the element with the ID "mode" and targets its first child element.
+    -  Sets the id attribute of the child element to the value of `modeParam`.
+-  ` document.getElementById(modeParam).textContent = colorParam;`:
+    -  Uses the value of `modeParam` to look up an element by its ID
+    -  Sets the textContent of that element to the value of `colorParam`.
+3. Service Worker Registration:
+-  `sw = document.getElementById('sw').innerText;`:
+    -  Retrieves the innerText (text content) of the element with the ID "sw".
+    -  Stores the retrieved content in the `sw` variable.
+
 
 `https://events.wizer-ctf.com/sw.js?sw=` have the following code
 
