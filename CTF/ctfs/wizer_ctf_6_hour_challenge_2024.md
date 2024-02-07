@@ -1,4 +1,7 @@
 # Wizer CTF Event 6 Hour Challenge
+> Start Time: 4 February 2024, 10 AM Eastern Time
+
+> End Time: 4 February 2024, 4 PM Eastern Time
 
 <br>
 
@@ -409,6 +412,17 @@ Payload:
 ```shell
 https://dsw3qg.wizer-ctf.com/submit_flag/WIZER{'PICKL1NG_1S_DANGEROUS'}
 ```
+
+<br>
+
+-------------
+
+<br>
+
+I was placed in the top 10 😊
+
+![Aftab Sama - Top 10 CTF Challenge](https://github.com/Aftab700/Writeups/assets/79740895/88af25f0-6f6d-4f88-9c97-0be8880d8d98)
+
 
 <br>
 
