@@ -254,6 +254,7 @@ Element Updates:
 - `document.getElementById("mode").children[0].id = modeParam;`:
   1. Finds the element with the ID "mode" and targets its first child element.
   2. Sets the id attribute of the child element to the value of `modeParam`.
+
 - `document.getElementById(modeParam).textContent = colorParam;`:
   1. Uses the value of `modeParam` to look up an element by its ID
   2. Sets the textContent of that element to the value of `colorParam`.
@@ -295,7 +296,7 @@ const channel = new BroadcastChannel('recipebook');
 channel.postMessage({ message: 'Wizer' });
 ```
 
-upload this file publicaly on internet: https://aftab700.pythonanywhere.com/api/xss
+upload this file publicaly on internet: [https://aftab700.pythonanywhere.com/api/xss](https://aftab700.pythonanywhere.com/api/xss)
 
 Payload:
 ```shell
