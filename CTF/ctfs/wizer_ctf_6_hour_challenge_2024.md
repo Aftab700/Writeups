@@ -2,6 +2,8 @@
 
 <br>
 
+CTF URL: [https://sam.wizer-ctf.com/?id=cdn_5ubd0m41n](https://sam.wizer-ctf.com/?id=cdn_5ubd0m41n)
+
 This CTF focuses on secure coding, we are given the source code for each challenge to analyse.
 
 ## Challenges
