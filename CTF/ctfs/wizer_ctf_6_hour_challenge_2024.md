@@ -2,6 +2,8 @@
 
 <br>
 
+This CTF focuses on secure coding, we are given the source code for each challenge to analyse.
+
 ## Challenges
 
 - [JWT Authentication](#jwt-authentication)
@@ -16,7 +18,7 @@
 
 <br>
 
-<details><summary markdown="span">Click to see code :diamond_shape_with_a_dot_inside: </summary>
+<details><summary markdown="span">Click to see source code :diamond_shape_with_a_dot_inside: </summary>
 
 ```js
 const express = require('express');
@@ -96,7 +98,7 @@ Payload:
 
 <br>
 
-<details><summary markdown="span">Click to see code :diamond_shape_with_a_dot_inside: </summary>
+<details><summary markdown="span">Click to see source code :diamond_shape_with_a_dot_inside: </summary>
 
 ```bash
 user  nginx;
@@ -162,7 +164,7 @@ https://nginx.wizer-ctf.com/assets../flag.html
 
 <br>
 
-<details><summary markdown="span">Click to see code :diamond_shape_with_a_dot_inside: </summary>
+<details><summary markdown="span">Click to see source code :diamond_shape_with_a_dot_inside: </summary>
 
 ```js
 const express = require('express');
@@ -285,7 +287,7 @@ https://events.wizer-ctf.com/?mode=sw&color=\\aftab700.pythonanywhere.com/api/xs
 
 <br>
 
-<details><summary markdown="span">Click to see code :diamond_shape_with_a_dot_inside: </summary>
+<details><summary markdown="span">Click to see source code :diamond_shape_with_a_dot_inside: </summary>
 
 ```python
 from flask import Flask, request, render_template
