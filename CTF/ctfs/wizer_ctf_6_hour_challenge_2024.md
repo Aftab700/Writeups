@@ -79,6 +79,8 @@ This app will check if the `token` parameter is present in the request body's JS
 
 If `token` is present it will Verify the JWT token.
 
+Reference for JSON web tokens (JWTs): [https://portswigger.net/web-security/jwt](https://portswigger.net/web-security/jwt#what-are-jwts)
+
 ![image](https://github.com/Aftab700/Writeups/assets/79740895/de844715-31d1-449b-8ea3-6470007a1f16)
 
 It support all JWT algorithms including `NONE` to verify JWT token, so we can bypass the verification using `NONE` as algorithm. It will accept tokens that have no signature at all.  \
@@ -86,6 +88,7 @@ Then it will check if `{"access":"flag"}` is present in jwt payload data.
 
 ![image](https://github.com/Aftab700/Writeups/assets/79740895/0000fbad-95fe-49e9-bce5-2f9afc64753a)
 
+A JWT consists of 3 parts: a header, a payload, and a signature. These are each base64 encoded and separated by a dot. \
 now we create jwt token with HEADER (ALGORITHM & TOKEN TYPE): `{"typ":"JWT","alg":"NONE"}` and PAYLOAD (DATA): `{"access":"flag"}` with blank SIGNATURE.
 
 Payload:
