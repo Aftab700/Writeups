@@ -382,7 +382,13 @@ To exploit this vulnerability, we will use `__reduce__` method. \
 `__reduce__` allows you to define a custom way to reconstruct the object during deserialization. It can be used for execution of arbitrary 
 code during deserialization
 
-I wasted so much time on payload making because i was using `os.system` but it didn't work at last `subprocess.Popen` worked
+I wasted so much time on payload making because i was using `os.system` but it didn't work at last `subprocess.Popen` worked.
+
+> [!NOTE]  
+> It won't work because `os.system` method uses respective shell of the Operating system that it is running on so for `os.system` to work during Deserialization we need to Serialize the payload on the machine that matches the target OS. \
+> Here target is running Linux so Windows won’t work
+
+<br>
 
 python exploit code:
 
